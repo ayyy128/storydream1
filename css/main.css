@@ -1,0 +1,130 @@
+@charset "utf-8";
+
+body { font-family: 'Noto Serif KR', serif; font-size: 1.6rem; color: #000; line-height: 1.5; }
+
+.clearfix:after { content: ''; display: block; clear: both; }
+.inner { max-width: calc(100% - 5.254%); margin: 0 auto; }
+#wrap { overflow-x: hidden; }
+
+
+/* header */
+#header { transition: background 1s; z-index: 99; position: absolute; left: 0; top: 0; width: 100%; }/* body는 기본적으로 position: relative; 잡혀있다 */
+#header .inner { transition: height 1s; height: 200px; align-items: center; display: flex; justify-content: space-between; }
+
+
+#header .gnb > li { float: left; }
+#header .gnb > li a { display: block; padding: 10px 20px; }
+
+#header .gnb > li:nth-child(n+5) > a { color: #999; } /* 5번부터 마지막까지 */
+
+
+#header.fix { position: fixed; left: 0; top: 0; background: #ddd; } /* 아이디 값과 클래스 값 동시에(띄워쓰기X) */
+#header.fix .inner { height: 100px; }
+
+
+/* 모바일메뉴 */
+#header .ham { display: none; width: 30px; height: 30px; cursor: pointer; font-size: 0;}  /* 폰ㅌ 사이즈0을 주면 요소가 없다고 인식할 수 있기 때문에 가로, 세로 줘야함 */
+#header .ham span { position: relative; display: inline-block; width: 100%; height: 2px; background: #000; }
+#header .ham span:before { content: ''; display: block; width: 25px; height: 2px; background: #000; position: absolute; right: 0; top: -10px; }
+#header .ham span:after { content: ''; display: block; width: 15px; height: 2px; background: #000; position: absolute; right: 0; top: 10px; }
+
+
+#header .mgnb_wrap {width: 100%; height: 100%; position: fixed; left: 0; top: 0; background: rgba(0, 0, 0, 0.8); }
+#header .mgnb { padding: 150px 50px; position: absolute; top: 0; right: 0; width: 70%; height: 100%; background: #f9f1e9; }
+#header .mgnb ul li { border-bottom: 1px solid #ddd; padding: 20px 0; }
+#header .mgnb .close { position: absolute; right: 0; top: 0; width: 80px; padding: 10px 0; text-align: center; background: #000; color: #fff; cursor: pointer; }
+
+
+#header .util li { float: left; margin: 0 10px; width: 24px; height: 24px; }
+
+
+@media (max-width:1200px){
+    #header .gnb { display: none; }
+    #header .util { display: none; }
+    #header .ham { display: block; }
+}
+
+
+/* search */
+.search { z-index: 99; width: 100%; height: 100%; background: rgba(0, 0, 0, 0.9); position: fixed; left: 0; top: 0; }
+.search .inner { position: absolute; left: 50%; top: 50%; transform: translate(-50%,50%); }
+.search input[type="text"] { font-family: 'Noto Serif KR', serif; font-size: 2rem; width: 700px; height: 60px; padding: 20px; }
+.search input[type="submit"] { font-family: 'Noto Serif KR', serif; font-size: 2rem; width: 80px; height: 60px; background: #666; color: #fff; }
+
+.search  .search_close { position: absolute; right: 0; top: 0; }
+.search  .search_close span { display: block; position: relative; width: 50px; height: 50px; background: #000; font-size: 0; }
+.search  .search_close span:before { position: absolute; left: 0; top: 25px; content: ''; display: block; width: 100%; height: 1px; background: #fff; transform: rotate(45deg); }
+.search  .search_close span:after { position: absolute; left: 0; top: 25px; content: ''; display: block; width: 100%; height: 1px; background: #fff; transform: rotate(-45deg); }
+
+
+/* container공통요소 */
+#container .subtitle { text-align: center; }
+#container .subtitle h2 { color: #999; font-size: 1.2rem; letter-spacing: 2px; font-weight: 300;}
+#container .subtitle h3 { font-weight: 400; font-size: 3.2rem; padding: 10px 0 30px; }
+#container .subtitle p { color: #999; }
+#container .subtitle a { display: inline-block; padding: 10px; font-size: 1.4rem; border-bottom: 1px solid #000; }
+
+
+/* main_visual */
+#main_visual { position: relative; height: 900px; background: #f9f1e9; }/* 모바일 고려해서 height 주기  */
+#main_visual img { width: 100%; height: 100%; object-fit: cover; }
+#main_visual .mv_txt { text-align: right; position: absolute; top: 250px; right: 100px; } /* top:250px; right:100px; */
+#main_visual .mv_txt h2 { font-weight: 400; font-size: 3.2rem; padding: 10px 0 30px; }
+#main_visual .mv_txt span { color: #999; font-size: 1.2rem; letter-spacing: 2px; }
+
+
+/* story */
+#story { text-align: center; padding: 7.882% 0; }
+#story .inner { padding: 0 2.5% ; }
+
+#story ul { display: flex; flex-wrap: wrap; justify-content: space-between; }/* 플렉스 값는 모바일로 볼때 다른 줄로 넘어가게 하기 위한것 css에 선언 해야함 */
+#story ul li { width: calc((100% - 100px)/3); margin: 20px 0; }
+#story ul li img { width: 100%; }
+
+@media (max-width:1024px){
+    #story ul li { width: 100% }
+}
+
+#story ul li dl dt { font-size: 2.4rem; }
+#story ul li dl dd { padding-top:1.871%; color: #999; }
+#story ul li dl dd a { border-bottom: 1px solid #000; font-size: 1.4rem; }
+
+
+/* product */
+#product { text-align: center; padding: 7.882% 0; background: #f9f1e9; }
+#product .inner { padding: 0 2.5% ; }
+
+#product ul { display: flex; justify-content: space-between; } 
+#product ul li { transition: opacity 0.5s, transform 0.5s; transform: scale(0.8,0.8); opacity: 0.5; width: calc((100% - 150px)/4);  }/* 스케일 값으로 80% 줄여 놓은것-swiper자체에 overflow: hidden; 잡혀있기 때문에 80%로 줄였다가 키워야함 */
+#product ul li img { width: 100%; border-radius: 50%; }/* 가로세로가 1:1 이미지라는 가정하에 border-radius: 50%; 주면 정원 */
+
+#product ul li.swiper-slide-active { opacity: 1; transform: scale(1,1); }/* css에 클래스를 추가 해서 현재요소에 적용 되는 스타일 을 잡아줌 */
+
+#product .swiper-button-prev { color: #000; }
+#product .swiper-button-next { color: #000; }
+
+
+/* review */
+#review { padding: 100px 0; }
+#review .inner { padding: 0 300px; text-align: center; }
+#review video { width: 100%; }
+
+@media (max-width:1600px) {
+    #review .inner { padding: 0 150px; }
+}
+
+@media (max-width:1024px) {
+    #review .inner { padding: 0 50px; }
+}
+
+
+/* footer */
+#footer { background: #eee; padding: 7.882% 0; }
+#footer .inner { display: flex; justify-content: center; }
+#footer .footer_logo { padding: 0 50px; }
+footer .footer_txt span { color: #999; }
+
+@media (max-width:1024px){
+    #footer .inner { font-size: 1.4rem; flex-direction: column; text-align: center; }/* flex-direction: row -> column 주축(가로)과 교차축(세로)을 교체 */
+    #footer .footer_logo { padding: 20px 50px; }
+}
