@@ -1,0 +1,796 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>STORYDREAM</title>
+</head>
+
+<!--opengraph-->
+    <!-- 모든 html문서에 다 들어가야 한다 -->
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="STORYDREAM">
+    <meta property="og:url" content="http://test.dothome.co.kr">
+    <meta property="og:image" content="../images/common/og_img.jpg"><!-- 2:1사이즈 -->
+    <meta property="og:description" content="한 손에 들어오는 판타지 스토리 드림, STORTSREAM">
+
+    <!-- favicon -->
+    <!--사이즈 16*16 .ico로 작성-->
+    <link rel="shortcut icon" href="../images/common/storydream_favi.ico">
+
+    <!-- font -->
+    <link href="../css/font.css" rel="stylesheet"> <!-- 한글 -->
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@700;800&display=swap" rel="stylesheet">
+    <!-- 영문 -->
+
+    <!-- CSS -->
+    <link href="../css/common.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css">
+    <!-- 아이콘 CDN빙식으로 적용-->
+    <link href="../css/swiper-bundle.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" /> <!-- aos -->
+    <link href="../css/audio.css" rel="stylesheet">
+
+    <!-- js -->
+    <script src="../js/jquery-3.6.0.min.js"></script>
+    <script src="../js/swiper-bundle.min.js"></script>
+    <script src="../js/isotope.pkgd.min.js"></script>
+    <script src="../js/audio.js"></script>
+<body>
+    
+    <div id="wrap">
+
+        <header id="header">
+            <div class="inner">
+
+                <div class="gnb_left clearfix">
+
+                    <h1><a href="../index.html"><img src="../images/common/logo.png" alt="스토리드림">
+                        </a></h1><!-- ./라고 쓰기도 함(현재페이지 라는 뜻) -->
+
+                    <nav>
+                        <ul class="gnb clearfix">
+                            <li><a href="../index.html">Story</a>
+                                <ul class="depth2 clearfix">
+                                    <li class="paper"><a href="../index.html">페이퍼북</a></li>
+                                    <li class="audio"><a href="../sub/audio.html">오디오북</a></li>
+                                </ul><!-- depth2 clearfix -->
+                            </li>
+
+                            <li><a href="../sub/community.html">커뮤니티</a></li>
+                            <li><a href="../sub/search.html">검색</a></li>
+                            <li><a href="../sub/library.html">내서재</a></li>
+                            <li><a href="../sub/my.html">관리</a></li>
+                        </ul>
+                    </nav>
+
+                </div><!-- gnb_left -->
+
+                <div class="gnb_right">
+                    <p>로그인</p>
+                </div><!-- gnb_right -->
+
+            </div><!-- inner -->
+            <div class="depth2_bg"></div>
+
+
+            <div class="mdepth2">
+                <ul class="clearfix">
+                    <li class="paper"><a href="../index.html">페이퍼북</a></li>
+                    <li class="audio"><a href="../sub/audio.html">오디오북</a></li>
+                </ul>
+            </div>
+
+            <div class="mgnb">
+                <ul class="clearfix">
+                    <li><a href="../index.html"><img src="../images/common/logo_4.png" alt="로고"><br>Story</a>
+                    </li>
+                    <li><a href="../sub/community.html"><img src="../images/main/community.png" alt="커뮤니티 아이콘"><br>커뮤니티</a>
+                    </li>
+                    <li><a href="../sub/search.html"><img src="../images/main/search.png" alt="검색 아이콘"><br>검색</a></li>
+                    <li><a href="../sub/library.html"><img src="../images/main/library.png" alt="내서재 아이콘"><br>내서재</a></li>
+                    <li><a href="../sub/my.html"><img src="../images/main/my.png" alt="마이 아이콘"><br>마이</a></li>
+                </ul>
+            </div><!-- mgnb -->
+
+        </header><!-- header -->
+
+        <main id="container">
+            <section id="main_banner">
+                <div class="inner_100">
+
+                    <div class="swiper mb">
+                        <ul class="swiper-wrapper">
+                            <li class="swiper-slide mb1"><a href="../sub/all.html">
+                                    <div class="inner">
+                                        <div class="mb_txt">
+                                            <p><i class="bi bi-headphones"></i>서점에서 펼쳐지는 감동 스토리<br>
+                                                상처받은 사람들이 선택한 안식처
+                                                </p>
+                                        </div><!-- mb_txt -->
+                                        <img src="../images/sub/banner_01.png" alt=".어서오세요, 휴남동 서점입니다.">
+                                    </div>
+                                </a></li><!-- swiper-slide mb1" -->
+
+                            <li class="swiper-slide mb2"><a href="../sub/all.html">
+                                    <div class="inner">
+                                        <div class="mb_txt">
+                                            <p><i class="bi bi-headphones"></i>잠이 들어야만 입장이 가능합니다.<br>
+                                                꿈을 파는 백화점 이야기</p>
+                                        </div><!-- mb_txt -->
+                                        <img src="../images/sub/banner_01.png"  alt="달러구트 꿈 백화점">
+                                    </div>
+                                </a></li><!-- swiper-slide mb2" -->
+
+                        </ul><!-- swiper-wrapper -->
+
+                        <div class="swiper-button-next arrow next"></div><!-- 방향버튼 -->
+                        <div class="swiper-button-prev arrow prev"></div><!-- 방향버튼 -->
+
+                        <div class="swiper-pagination"></div><!-- 밑에 슬라이드 표시 -->
+
+                    </div><!-- swiper mb -->
+
+                </div><!-- nner_100 -->
+            </section><!-- main_banner -->
+
+            <section id="dream_best">
+                <div class="inner">
+                    <h2>드림 오디오북 베스트 <span class="standard">2022.00.00 기준</span></h2>
+
+                    <div class="dream_best_all">
+
+                    <div class="swiper best_all">
+                        <div class="swiper-wrapper">
+                            <div class="swiper-slide best_list1">
+                                <div class="best">
+                                    <dl>
+                                        <dt>
+                                            <div class="book_img">
+                                                <img src="../images/sub/audio1_1-1.jpg" alt="불편한 편의점">
+                                            </div><!-- book_img" -->
+        
+                                            <div class="book_txt">
+                                                <span class="number">1</span> <span class="b_name">불편한 편의점</span><br>
+                                                <span class="change"><img src="../images/main/Line.png" alt="선"></span> <span
+                                                    class="name">김호연</span>
+                                            </div><!-- book_txt -->
+                                        </dt>
+        
+                                        <dd><a href="../sub/all.html">
+                                                <div class="txt_1">완독 확률 79%의 웃음과 감동</div>
+                                                <div class="txt_2">불편한데 자꾸 가고 싶은 편의점이 있다.</div>
+                                                <img src="../images/sub/audio1_1.jpg" alt="불편한 편의점">
+                                            </a></dd>
+                                    </dl>
+                                </div><!-- best -->
+        
+                                <div class="best">
+                                    <dl>
+                                        <dt>
+                                            <div class="book_img">
+                                                <img src="../images/sub/audio1_2-1.jpg"  alt="하쿠타 사진관">
+                                            </div><!-- book_img" -->
+        
+                                            <div class="book_txt">
+                                                <span class="number">2</span> <span class="b_name">하쿠타 사진관</span><br>
+                                                <span class="change"><img src="../images/main/Line.png" alt="선"></span> <span
+                                                    class="name">하태연</span>
+                                            </div><!-- book_txt -->
+                                        </dt>
+        
+                                        <dd><a href="../sub/all.html">
+                                                <div class="txt_1">"우리들의 블루스는 아직 끝나지 않앗다."</div>
+                                                <div class="txt_2">마을의 사진관에서 벌어지는 감동 스토리</div>
+                                                <img src="../images/sub/audio1_2.jpg" alt="하쿠타 사진관">
+                                            </a></dd>
+                                    </dl>
+                                </div><!-- best -->
+        
+                                <div class="best">
+                                    <dl>
+                                        <dt>
+                                            <div class="book_img">
+                                                <img src="../images/sub/audio1_3-1.jpg" alt="나무">
+                                            </div><!-- book_img" -->
+        
+                                            <div class="book_txt">
+                                                <span class="number">3</span> <span class="b_name">나무</span><br>
+                                                <span class="change"><img src="../images/main/Line.png" alt="선"></span> <span
+                                                    class="name">베르나르 베르베르</span>
+                                            </div><!-- book_txt -->
+                                        </dt>
+        
+                                        <dd><a href="../sub/all.html">
+                                                <div class="txt_1">베르나르 베르베르의 짧은 단편집 모음</div>
+                                                <div class="txt_2">세계를 새롭게 바라보게 해주는 기발한 이야기</div>
+                                                <img src="../images/sub/audio1_3.jpg" alt="나무">
+                                            </a></dd>
+                                    </dl>
+                                </div><!-- best -->
+        
+                            </div><!-- swiper-slide best_list1 -->
+        
+        
+                            <div class="swiper-slide best_list2">
+                                <div class="best">
+                                    <dl>
+                                        <dt>
+                                            <div class="book_img">
+                                                <img src="../images/sub/audio1_4-1.jpg" alt="달러구트 꿈백화점">
+                                            </div><!-- book_img" -->
+        
+                                            <div class="book_txt">
+                                                <span class="number">4</span> <span class="b_name">달러구트 꿈백화점 </span><br>
+                                                <span class="change"><img src="../images/main/up.png" alt="업"><span class="up">2</span></span> <span
+                                                    class="name">이미예</span>
+                                            </div><!-- book_txt -->
+                                        </dt>
+        
+                                        <dd><a href="../sub/all.html">
+                                                <div class="txt_1">잠이 들어야만 입장이 가능합니다. </div>
+                                                <div class="txt_2">꿈을 파는 백화점 이야기!</div>
+                                                <img src="../images/sub/audio1_4.jpg" alt="달러구트 꿈백화점">
+                                            </a></dd>
+                                    </dl>
+                                </div><!-- best -->
+        
+                                <div class="best">
+                                    <dl>
+                                        <dt>
+                                            <div class="book_img">
+                                                <img src="../images/sub/audio1_5-1.jpg" alt="어서오세요, 휴남동 서점입니다.">
+                                            </div><!-- book_img" -->
+        
+                                            <div class="book_txt">
+                                                <span class="number">5</span> <span class="b_name">어서오세요, 휴남동 서점
+                                                    &middot;&middot;&middot; </span><br>
+                                                <span class="change"><img src="../images/main/down.png" alt="down"><span class="down">2</span></span><span
+                                                    class="name">황보름</span>
+                                            </div><!-- book_txt -->
+                                        </dt>
+        
+                                        <dd><a href="../ub/all.html">
+                                                <div class="txt_1">서점에서 평쳐지는 감동 스토리</div>
+                                                <div class="txt_2">상처받은 사람들이 선택한 안식처</div>
+                                                <img src="../images/sub/audio1_5-1.jpg" alt="어서오세요, 휴남동 서점입니다.">
+                                            </a></dd>
+                                    </dl>
+                                </div><!-- best -->
+        
+                                <div class="best">
+                                    <dl>
+                                        <dt>
+                                            <div class="book_img">
+                                                <img src="../images/sub/audio1_6-1.jpg"alt="이상한 과자가게 전천당
+                                                &middot;&middot;&middot;">
+                                            </div><!-- book_img" -->
+        
+                                            <div class="book_txt">
+                                                <span class="number">6</span> <span class="b_name">이상한 과자가게 전천당</span><br>
+                                                <span class="change"><img src="../images/main/up.png" alt="up"><span class="up">3</span></span> <span
+                                                    class="name">히로시마 레이코</span>
+                                            </div><!-- book_txt -->
+                                        </dt>
+        
+                                        <dd><a href="../sub/all.html">
+                                                <div class="txt_1">아마존재팬어린이 판타지분야1위</div>
+                                                <div class="txt_2">투니버스 방영중인 애니메이션</div>
+                                                <img src="../images/sub/audio1_5.jpg" alt=".이상한 과자가게 전천당">
+                                            </a></dd>
+                                    </dl>
+                                </div><!-- best -->
+        
+                            </div><!-- best_list2 -->
+        
+                            <div class="swiper-slide best_list3">
+                                <div class="best">
+                                    <dl>
+                                        <dt>
+                                            <div class="book_img">
+                                                <img src="../images/sub/audio1_7-1.jpg" alt="어린왕자">
+                                            </div><!-- book_img" -->
+        
+                                            <div class="book_txt">
+                                                <span class="number">7</span> <span class="b_name">어린왕자 </span><br>
+                                                <span class="change"><img src="../images/main/down.png" alt="down"><span class="down">3</span></span> <span
+                                                    class="name">생텍쥐페리</span>
+                                            </div><!-- book_txt -->
+                                        </dt>
+        
+                                        <dd><a href="../sub/all.html">
+                                                <div class="txt_1">누군가에게 상처를 받아 속상한 날.</div>
+                                                <div class="txt_2">당신을 새로운 별에 데려다 드릴께요</div>
+                                                <img src="../images/sub/audio1_7.jpg" alt="어린왕자">
+                                            </a></dd>
+                                    </dl>
+                                </div><!-- best -->
+        
+                                <div class="best">
+                                    <dl>
+                                        <dt>
+                                            <div class="book_img">
+                                                <img src="../images/sub/audio1_8-1.jpg" alt="브레드 이발소">
+                                            </div><!-- book_img" -->
+        
+                                            <div class="book_txt">
+                                                <span class="number">8</span> <span class="b_name">브레드 이발소</span><br>
+                                                <span class="change"><img src="../images/main/Line.png" alt="선"></span><span
+                                                    class="name">(주)몬스터스튜디오</span>
+                                            </div><!-- book_txt -->
+                                        </dt>
+        
+                                        <dd><a href="../sub/all.html">
+                                                <div class="txt_1">애니메이션처럼 듣는 화려한 오디오북</div>
+                                                <div class="txt_2">천재 이발사 브레드 이야기</div>
+                                                <img src="../images/sub/audio1_8.jpg"  alt="브레드 이발소">
+                                            </a></dd>
+                                    </dl>
+                                </div><!-- best -->
+        
+                                <div class="best">
+                                    <dl>
+                                        <dt>
+                                            <div class="book_img">
+                                                <img src="../images/sub/audio1_9-1.jpg"alt="문명">
+                                            </div><!-- book_img" -->
+        
+                                            <div class="book_txt">
+                                                <span class="number">9</span> <span class="b_name">문명</span><br>
+                                                <span class="change"><img src="../images/main/down.png" alt="선"><span class="down">2</span></span> <span
+                                                    class="name">베르나르 베르베르</span>
+                                            </div><!-- book_txt -->
+                                        </dt>
+        
+                                        <dd><a href="../sub/all.html">
+                                                <div class="txt_1">인류문명의 끝에서 시작되는 이야기</div>
+                                                <div class="txt_2">베르나르 베르베르의 신작 장편소설</div>
+                                                <img src="../images/sub/audio1_9.jpg"alt="문명">
+                                            </a></dd>
+                                    </dl>
+                                </div><!-- best -->
+        
+                            </div><!-- best_list3 -->
+        
+                            <div class="swiper-slide best_list4">
+                                <div class="best">
+                                    <dl>
+                                        <dt>
+                                            <div class="book_img">
+                                                <img src="../images/sub/audio1_10-1.jpg"alt="책들의 부엌">
+                                            </div><!-- book_img" -->
+        
+                                            <div class="book_txt">
+                                                <span class="number">10</span> <span class="b_name">책들의 부엌</span><br>
+                                                <span class="change"><img src="../images/main/Line.png" alt="업"><span class="up">2</span></span><span
+                                                    class="name">김지헤</span>
+                                            </div><!-- book_txt -->
+                                        </dt>
+        
+                                        <dd><a href="../sub/all.html">
+                                                <div class="txt_1">독자들이 뽑은 책 1위!</div>
+                                                <div class="txt_2">"달러구트"를 이을 또 하나의 대작</div>
+                                                <img src="../images/sub/audio1_10.jpg" alt="책들의 부엌">
+                                            </a></dd>
+                                    </dl>
+                                </div><!-- best -->
+        
+                                <div class="best">
+                                    <dl>
+                                        <dt>
+                                            <div class="book_img">
+                                                <img src="../images/sub/audio1_11-1.jpg" alt="외모 대여점">
+                                            </div><!-- book_img" -->
+        
+                                            <div class="book_txt">
+                                                <span class="number">11</span> <span class="b_name">외모 대여점</span><br>
+                                                <span class="change"><img src="../images/main/down.png" alt="down"><span class="down">2</span></span> <span
+                                                    class="name">이시카와 히로치카</span>
+                                            </div><!-- book_txt -->
+                                        </dt>
+        
+                                        <dd><a href="../sub/all.html">
+                                                <div class="txt_1">당신의 마음을 토닥여줄 힐링 소설</div>
+                                                <div class="txt_2">무엇이든 빌려드립니다.</div>
+                                                <img src="../images/sub/audio1_11.jpg"alt="외모 대여점">
+                                            </a></dd>
+                                    </dl>
+                                </div><!-- best -->
+        
+                                <div class="best">
+                                    <dl>
+                                        <dt>
+                                            <div class="book_img">
+                                                <img src="../images/sub/audio1_12-1.jpg" alt="수상한 중고상점">
+                                            </div><!-- book_img" -->
+        
+                                            <div class="book_txt">
+                                                <span class="number">12</span> <span class="b_name">수상한 중고상점</span><br>
+                                                <span class="change"><img src="../images/main/Line.png" alt="up"><span class="up">1</span></span><span
+                                                    class="name">미치오 슈스케</span>
+                                            </div><!-- book_txt -->
+                                        </dt>
+        
+                                        <dd><a href="../sub/all.html">
+                                                <div class="txt_1">'나미야 잡화점'에 견줄 감동 소설</div>
+                                                <div class="txt_2">"아픈 마음까지도 매입합니다."</div>
+                                                <img src="../images/sub/audio1_12.jpg"  alt="수상한 중고상점">
+                                            </a></dd>
+                                    </dl>
+                                </div><!-- best -->
+        
+                            </div><!-- best_list4 -->
+        
+                        </div><!-- swiper-wapper -->
+                    </div><!-- swiper -->
+
+                    </div><!-- dream_best_all -->
+
+                </div><!-- inner -->
+            </section><!-- best -->
+
+            <section id="tag">
+                <div class="inner">
+        
+                    <h2>30분만에 듣는 판타지</h2>
+        
+                    <div class="tag_all">
+
+                        <div class="tag_wrap1">
+                        <div class="swiper tag_list1">
+        
+                            <ul class="swiper-wrapper">
+                                <li class="swiper-slide">
+                            
+                                <div class="tag_img">
+                                    <div class="tag_img1"><a href="../sub/all.html"><img src="../images/sub/audio2_1.jpg"
+                                                alt="아라의 소설"></a></div>
+        
+                                    <div class="tag_img2"><a href="../sub/all.html">
+                                        <p>
+                                            <span>올해의 작가 정세랑의 미니 픽션</span><br>
+                                            각자의 색으로 빛나는 우리의 이야기
+                                        </p>
+                                        <img src="../images/sub/audio2_1.jpg"
+                                                alt="아라의 소설"></a></div>
+                                </div><!-- tag_img -->
+                            
+                             </li>
+        
+                             <li class="swiper-slide">
+        
+                                <div class="tag_img">
+                                    <div class="tag_img1"><a href="../sub/all.html"><img src="../images/sub/audio2_2.jpg"
+                                                alt="한낮에 뜨는 달"></a></div>
+        
+                                    <div class="tag_img2"><a href="../sub/all.html">
+                                        <p>
+                                            <span>결혼식날 남편을 사고로 읽은 유하.</span><br>
+                                            다른세계에서 남편을 만나게 되는데..
+                                        </p>
+                                        <img src="../images/sub/audio2_2.jpg"
+                                                alt="한낮에 뜨는 달"></a></div>
+                                </div><!-- tag_img -->
+                            
+                             </li>
+        
+                             <li class="swiper-slide">
+        
+                                <div class="tag_img">
+                                    <div class="tag_img1"><a href="../sub/all.html"><img src="../images/sub/audio2_3.jpg"
+                                                alt="간니닌니 마법의 도서관"></a></div>
+        
+                                    <div class="tag_img2"><a href="../sub/all.html">
+                                        <p>
+                                        <span>키즈 크리에이터 간니닌니</span><br>
+                                        환상의 동화 나라로 모험을 떠나다!
+                                        </p>
+                                        <img src="../images/sub/audio2_3.jpg"
+                                                alt="간니닌니 마법의 도서관"></a></div>
+                                </div><!-- tag_img -->
+                            
+                             </li>
+        
+                             <li class="swiper-slide">
+        
+                                <div class="tag_img">
+                                    <div class="tag_img1"><a href="../sub/all.html"><img src="../images/sub/audio2_4.jpg"
+                                                alt="트리얀의 늑대"></a></div>
+        
+                                    <div class="tag_img2"><a href="../sub/all.html">
+                                        <p>
+                                        <span>"트리얀의 늑대" 시리즈</span><br>
+                                        빛나는 영웅 이카루스의 활약
+                                        </p>
+                                        <img src="../images/sub/audio2_4.jpg"
+                                                alt="트리얀의 늑대"></a></div>
+                                </div><!-- tag_img -->
+                            
+                             </li>
+
+                             <li class="swiper-slide">
+        
+                                <div class="tag_img">
+                                    <div class="tag_img1"><a href="../sub/all.html"><img src="../images/sub/audio2_5.jpg"
+                                                alt="트리얀의 늑대"></a></div>
+        
+                                    <div class="tag_img2"><a href="../sub/all.html">
+                                        <p>
+                                        <span>잠이 들어야만 입장이 가능합니다.</span><br>
+                                        꿈을 파는 백화점 이야기
+                                        </p>
+                                        <img src="../images/sub/audio2_5.jpg"
+                                                alt="트리얀의 늑대"></a></div>
+                                </div><!-- tag_img -->
+                            
+                             </li>
+        
+                            </ul><!-- swiper-wrapper -->
+                            <span class="swiper-button-next arrow next"></span><!-- 방향버튼 -->
+                        </div><!--swiper tag_list1-->
+                        
+                        </div>
+        
+        
+                    </div><!-- tag_all-->
+        
+                </div><!-- inner -->
+            </section><!-- tag -->
+
+
+            <section id="new">
+                <div class="inner">
+                    <h2>NEW! 판타지</h2>
+        
+                    <div class="new_all">
+                    <div class="new1_txt">
+                        <p>이번주</p>
+                    </div><!-- new_6 -->
+        
+                    <div class="swiper new1_img1">
+                        <ul class="swiper-wrapper">
+                            <li class="swiper-slide new_slide1">
+                                <a href="../sub/all.html"><img src="../images/sub/audio3_1-1.png" alt="어디에나 있고 어디에도 없는"></a>
+                            </li><!-- swiper-slide new_slide -->
+        
+                            <li class="swiper-slide new_slide2">
+                                <a href="../sub/all.html"><img src="../images/sub/audio3_1-2.png" alt="싸나톨로지"></a>
+                            </li><!-- swiper-slide new_slide -->
+        
+                            <li class="swiper-slide new_slide3">
+                                <a href="../sub/all.html"><img src="../images/sub/audio3_1-3.png" alt="당신은 생각보다 멘탈이 강한 사람입니다"></a>
+                            </li><!-- swiper-slide new_slide -->
+        
+                            <li class="swiper-slide new_slide4">
+                                <a href="../sub/all.html"><img src="../images/sub/audio3_1-4.png" alt="나의 벽을 넘어서는 불안상자"></a>
+                            </li><!-- swiper-slide new_slide -->
+        
+                            <li class="swiper-slide new_slide5">
+                                <a href="../sub/all.html"><img src="../images/sub/audio3_1-5.png" alt="우리의 인생에는 그림이 필요하다"></a>
+                            </li><!-- swiper-slide new_slide -->
+        
+                            <li class="swiper-slide new_slide6">
+                                <a href="../sub/all.html"><img src="../images/sub/audio3_1-6.png" alt="오늘의 법정을 열겠습니다"></a>
+                            </li><!-- swiper-slide new_slide -->
+        
+                            <li class="swiper-slide new_slide7">
+                                <a href="../sub/all.html"><img src="../images/sub/audio3_1-7.png" alt="그리움의 문장들"></a>
+                            </li><!-- swiper-slide new_slide -->
+        
+                            <li class="swiper-slide new_slide8">
+                                <a href="../sub/all.html"><img src="../images/sub/audio3_1-8.png" alt="곤란할 땐, 옆집언니"></a>
+                            </li><!-- swiper-slide new_slide -->
+        
+                            <li class="swiper-slide new_slide9">
+                                <a href="../sub/all.html"><img src="../images/sub/audio3_1-9.png" alt="나로 살기 위해 오늘도 일하다"></a>
+                            </li><!-- swiper-slide new_slide -->
+        
+                            <li class="swiper-slide new_slide10">
+                                <a href="../sub/all.html"><img src="../images/sub/audio3_1-10.png" alt="생명이 있는 것은 다 아름답다"></a>
+                            </li><!-- swiper-slide new_slide -->
+                        </ul><!-- swiper-wrapper -->
+                    </div><!-- swiper new1_img -->
+        
+        
+                    <div class="new2_txt">
+                        <p>저번주</p>
+                    </div><!-- new_6 -->
+        
+                    <div class="swiper new1_img2">
+                        <ul class="swiper-wrapper">
+                            <li class="swiper-slide new_slide1">
+                                <a href="../sub/all.html"><img src="../images/sub/audio3_2-1.png" alt="미래에서 공부하는 할머니"></a>
+                            </li><!-- swiper-slide new_slide -->
+        
+                            <li class="swiper-slide new_slide2">
+                                <a href="../sub/all.html"><img src="../images/sub/audio3_2-2.png" alt="어떻게 인생을 살 것인가"></a>
+                            </li><!-- swiper-slide new_slide -->
+        
+                            <li class="swiper-slide new_slide3">
+                                <a href="../sub/all.html"><img src="../images/sub/audio3_2-3.png" alt="내 마음을 나도 모를 때"></a>
+                            </li><!-- swiper-slide new_slide -->
+        
+                            <li class="swiper-slide new_slide4">
+                                <a href="../sub/all.html"><img src="../images/sub/audio3_2-4.png" alt="부의 품격"></a>
+                            </li><!-- swiper-slide new_slide -->
+        
+                            <li class="swiper-slide new_slide5">
+                                <a href="../sub/all.html"><img src="../images/sub/audio3_2-5.png" alt="지금은 라디오 시대"></a>
+                            </li><!-- swiper-slide new_slide -->
+        
+                            <li class="swiper-slide new_slide6">
+                                <a href="../sub/all.html"><img src="../images/sub/audio3_2-6.png" alt="소로의 메인 숲"></a>
+                            </li><!-- swiper-slide new_slide -->
+        
+                            <li class="swiper-slide new_slide7">
+                                <a href="../sub/all.html"><img src="../images/sub/audio3_2-7.png" alt="나는 매주 시체를 보러 간다"></a>
+                            </li><!-- swiper-slide new_slide -->
+        
+                            <li class="swiper-slide new_slide8">
+                                <a href="../sub/all.html"><img src="../images/sub/audio3_2-8.png" alt="게임의 법칙"></a>
+                            </li><!-- swiper-slide new_slide -->
+        
+                            <li class="swiper-slide new_slide9">
+                                <a href="../sub/all.html"><img src="../images/sub/audio3_2-9.png" alt="좋은 삶을 위한 안내서"></a>
+                            </li><!-- swiper-slide new_slide -->
+        
+                            <li class="swiper-slide new_slide10">
+                                <a href="../sub/all.html"><img src="../images/sub/audio3_2-10.png" alt="그림책을 쓰고 싶은 당신에게"></a>
+                            </li><!-- swiper-slide new_slide -->
+                        </ul><!-- swiper-wrapper -->
+                    </div><!-- swiper new1_img -->
+                    
+                </div><!-- new_all -->
+                </div><!-- inner -->
+            </section><!-- new -->
+
+
+            <section id="today">
+                <div class="inner">
+                    <h2>완독 오디오북</h2>
+
+                    <div class="day_all">
+
+                        <div class="swiper up_today">
+                         
+                            <ul class="swiper-wrapper">
+                                <li class="swiper-slide bg1"><a href="../sub/all.html">
+                                        <p>손님들의 의뢰를 해결해주는 <br>
+                                            '시간을 파는 상점'
+                                        </p>
+                                        <img src="../images/sub/audio4_1.jpg" alt="시간을 파는 상점">
+                                        <p class="info">완독할 확률 88%<br>
+                                            완독예상시간 200분</p>
+                                    </a></li>
+
+                                <li class="swiper-slide bg2"><a href="../sub/all.html">
+                                        <p>그 돌은 단순한 돌이 아니었다.<br>
+                                            그 돌이 전해준 기이한 능력들은...
+                                        </p>
+                                        <img src="../images/sub/audio4_2.jpg" alt="행운을 주는 돌 1권">
+                                        <p class="info">완독할 확률 82%<br>
+                                            완독예상 시간 123분</p>
+                                    </a></li>
+
+                                <li class="swiper-slide bg3"><a href="../sub/all.html">
+                                        <p>올해의 작가 정세량의 미니 픽션<br>
+                                            각자의 색으로 빛나는 이야기
+                                        </p>
+                                        <img src="../images/sub/audio4_3.jpg" alt="아라의 소설">
+                                        <p class="info">완독할 확률 75%<br>
+                                            완독예상 시간 300분</p>
+                                    </a></li>
+
+                                <li class="swiper-slide bg4"><a href="../sub/all.html">
+                                        <p>독자들이 뽑은 책 1위!<br>
+                                          "달러구트"를 이을 또 하나의 대작
+                                        </p>
+                                        <img src="../images/sub/audio4_4.jpg" alt="책들의 부엌">
+                                        <p class="info">완독할 확률 62%<br>
+                                            완독예상 시간 31분</p>
+                                    </a></li>
+
+                                <li class="swiper-slide bg5"><a href="../sub/all.html">
+                                        <p>서점에서 평쳐지는 감동 스토리<br>
+                                            상처받은 사람들이 선택한 안식처
+                                        </p>
+                                        <img src="../images/sub/audio4_5.jpg" alt="어서오세요, 휴남동 서점입니다.">
+                                        <p class="info">완독할 확률 67%%<br>
+                                            완독에상 시간 200분</p>
+                                    </a></li>
+
+                                <li class="swiper-slide bg6"><a href="../sub/all.html">
+                                        <p>당신의 마음을 위로할 힐링 소설<br>
+                                            무엇이든 빌려드립니다.
+
+                                        </p>
+                                        <img src="../images/sub/audio4_6.jpg" alt="외모 대여점">
+                                        <p class="info">완독할 확률 46%<br>
+                                            완독예상 시간 432분</p>
+                                    </a></li>
+
+                            </ul><!-- up_today -->
+
+                        </div><!-- swiper -->
+
+                    </div><!-- day_all -->
+                </div><!-- inner -->
+            </section><!-- today -->
+
+            <section id="reader">
+                <div class="inner">
+                    <h2>판타지와 함께한 Reader!</h2>
+
+                    <div class="reader_all">
+                    <div class="swiper reader_slide">
+
+                    <ul class="swiper-wrapper">
+                    <li class="swiper-slide reader_1">
+                    <a href="../sub/all.html"><img src="../images/sub/audio5_1.png" alt="한예리">
+                    <div class="reader_txt">
+                        <p>한예리</p>
+                        <span>성우</span>
+                    </div><!-- reader_txt -->
+                </a>
+                </li><!-- reader_1 -->
+        
+                <li class="swiper-slide reader_2">
+                    <a href="../sub/all.html"><img src="../images/sub/audio5_2.png" alt="박정민">
+                        <div class="reader_txt">
+                            <p>박정민</p>
+                            <span>배우</span>
+                    </div><!-- reader_txt -->
+                </a>
+                </li><!-- reader_1 -->
+        
+                <li class="swiper-slide reader_3">
+                    <a href="../sub/all.html"><img src="../images/sub/audio5_3.png" alt="박선영">
+                        <div class="reader_txt">
+                            <p>박선영</p>
+                            <span>아나운서</span>
+                    </div><!-- reader_txt -->
+                </a>
+                </li><!-- reader_1 -->
+        
+                <li class="swiper-slide reader_4">
+                    <a href="../sub/all.html"><img src="../images/sub/audio5_4.jpg" alt="엄태규">
+                        <div class="reader_txt">
+                            <p>엄태규</p>
+                            <span>배우</span>
+                    </div><!-- reader_txt -->
+                </a>
+                </li><!-- reader_1 -->
+                </ul>
+            </div><!-- reader_slide -->
+        </div><!-- reader_all -->
+        
+                </div><!-- inner -->
+            </section><!-- reader -->
+
+            <footer id="footer">
+                <div class="inner">
+                    <div class="footer_logo">
+                        <a href="../index.html"><img src="../images/common/logo.png" alt="storydream 로고"></a>
+                        </div><!-- footer_logo -->
+        
+                        <ul>
+                            <li>이용약관<i class="bi bi-chevron-right"></i></li>
+                            <li>개인정보처리방침<i class="bi bi-chevron-right"></i></li>
+                            <li>청소년정책보호<i class="bi bi-chevron-right"></i></li>
+                            <li>고객센터<i class="bi bi-chevron-right"></i></li>
+                            <li>환불신청<i class="bi bi-chevron-right"></i></li>
+                            <li>콘텐츠제휴문의<i class="bi bi-chevron-right"></i></li>
+                            <li>저작권/도서오류신고<i class="bi bi-chevron-right"></i></li>
+                            <li>뷰어다운로드<i class="bi bi-chevron-right"></i></li>
+                            <li>종료예상도서<i class="bi bi-chevron-right"></i></li>
+                        </ul>
+        
+                        <p class="copy">Copyright &copy; 2022 All Rights Reserved.</p>
+                </div><!-- inner -->
+            </footer>
+
+    </div><!-- wrap -->
+
+</body>
+</html>

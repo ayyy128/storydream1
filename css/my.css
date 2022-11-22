@@ -1,0 +1,117 @@
+@charset "utf-8";
+
+body {  font-family: 'S-CoreDream', sans-serif; font-size: 1.6rem; line-height: 1.5; color: #000; overflow-x: hidden; }
+.clearfix:after { content: ''; display: block; clear: both; }
+
+
+#wrap { overflow-x: hidden; }
+.inner { max-width: calc(100% - 693px); margin: 0 auto; } /* 지정된 사이즈 */
+.inner_100 { max-width: 700px; margin: 0 auto; } /* 100% 사이즈 */
+
+@media (max-width:1600px) {
+    .inner { max-width: calc(100% - 160px); }
+}
+
+@media (max-width:1400px) {
+    .inner { max-width: calc(100% - 140px); }
+}
+
+@media (max-width:1200px) {
+    .inner { max-width: calc(100% - 120px); }
+}
+
+@media (max-width:1024px) {
+    .inner { max-width: calc(100% - 100px); }
+}
+
+@media (max-width:768px) {
+    .inner { max-width: calc(100% - 40px); }
+}  /* 모바일 */
+
+@media (max-width:320px) {
+    .inner { max-width: calc(100% - 20px); }
+}
+
+/* header */
+#header { color: #2B1803; height: 64px; border-bottom: 1px solid #ddd; }
+#header .inner { height: 64px; align-items: center; display: flex; justify-content: space-between; position: relative; } /* 가로배치, 높이 값 주고 세로 중앙정렬 */
+#header h1 img { display: block; width: 90px; padding-top: 11px; } /* line-height값 제거 */
+
+#header .gnb { margin-left: 30px; }
+
+#header .gnb_left { display: flex; justify-content: space-between; }
+#header .gnb > li { float: left; position: relative; z-index: 999; } /* or 인라인 블럭 씀 */
+
+#header .gnb > li:nth-child(5) > a { font-weight: 700; color: #2B1803; }
+#header .gnb > li .paper { font-weight: 700; color: #2B1803; }
+
+#header .gnb > li > a { display: block; padding: 5px 30px 5px; font-size: 1.6rem; font-weight: 400; } 
+
+#header .gnb_right { font-size: 1.2rem; width: 85px; height: 33px; background: #2b1803; border-radius: 10px; color: #fff; font-weight: 500; }
+
+#header .gnb_right p { text-align: center; padding-top: 6px; }
+
+@media (max-width:1000px) {
+    #header { height: 55px; } 
+    #header .inner { height: 55px; }
+    #header .gnb > li { display: none; }
+    #header .gnb_right { display: none; }
+
+    #header.fix {  height: 55px; }
+}
+
+
+/* mgnb */
+#header .mgnb { display: none; text-align: center; line-height: 1.2; position: fixed; bottom: 0; left: 0; width: 100%; border-top: 1px solid #ddd; z-index: 9999999; }
+#header .mgnb li:nth-child(1) img { height: 24px; }
+#header .mgnb li:nth-child(5) img { filter: invert(55%) sepia(90%) saturate(460%) hue-rotate(353deg) brightness(97%) contrast(97%); }
+#header .mgnb img { width: 24px; height: 24px; }
+#header .mgnb ul { display: flex; justify-content: center; background: #FFF; }
+#header .mgnb ul li a { display: block; padding: 10px 28px; font-size: 1.2rem; color: #2B1803; }
+#header .mgnb ul li:nth-child(5) a { color: #F39414;  }
+
+
+@media (max-width:1000px) {
+    #header .mgnb { display: block; }
+}
+
+@media (max-width:700px) {
+    #header .mgnb { font-size: 0.8rem; }
+    #header .mgnb li:nth-child(1) img { height: 20px; }
+    #header .mgnb img { width: 20px; height: 20px; }
+    #header .mgnb ul li a { padding: 10px 20px; font-size: 1.0rem; }
+}
+
+/* my */
+#my .inner_100 { height: 900px; }
+#my .product { padding: 40px 16px 24px; position: relative; background: #fff;}
+#my .product .my_id { font-size: 1.9rem; font-weight: 700;
+line-height: 26px; margin-left: 7px; }
+
+#my .description { border: 1px solid #D9D0C7; border-radius: 4px; padding: 16px;
+margin-top: 16px; cursor: pointer; position: relative; }
+
+#my .title { font-size: 1.5rem; font-weight: 400; margin-bottom: 8px; padding-right: 85px; }
+#my .exp { color: #2B2B2B; font-size: 1.4rem; }
+
+#my .button { font-size: 1.1rem; color: #333; border: 1px solid #333; border-radius: 100px;
+padding: 3px 10px 3px 10px; font-weight: 400;position: absolute; top: 16px; right: 12px; }
+#my .button .bi-chevron-right { font-size: 1.0rem; }
+
+#my button { background: #685B4C; color: #fff; border-radius: 4px; display: block; width: 100%; height: 44px;
+line-height: 44px; text-align: center; margin-top: 8px; font-size: 1.5rem; border: none; cursor: pointer; }
+
+#my .menu-title { color: #8F867B; font-weight: 600;
+ font-size: 1.2rem; background: #F3EBE4; height: 32px; line-height: 32px; padding-left: 16px; }
+#my .menu_txt > li { height: 48px; line-height: 48px; border-bottom: 1px solid #dfdfdf; font-size: 1.5rem; padding-left: 16px; position: relative; cursor: pointer; }
+
+#my .share-list div { display: flex; justify-content: space-between; align-items: center; padding: 0 16px; height: 76px; }
+#my .share-list div p { font-size: 1.5rem; }
+
+#my .share-list ul {  display: flex; }
+#my .share-list ul li { padding-right: 15px; cursor: pointer; }
+#my .share-list ul li:last-child { padding-right: 0; }
+
+#my .btn-area { padding: 16px 16px 66px; background: #F3EBE4 }
+#my .btn-area button { background: #CBC1B7; font-size: 1.5rem; height: 48px; color: #000;
+line-height: 48px; display: block; width: 100%; border-radius: 4px; cursor: pointer; }

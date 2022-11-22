@@ -1,6 +1,7 @@
+
 @charset "utf-8";
 
-html { font-size: 62.5%; } /* font-size:10px: */
+html { font-size: 62.5%; } /* font-size:10px:
 
 /* 여백초기화 */
 * {margin: 0; padding: 0; box-sizing: border-box;}
@@ -11,12 +12,12 @@ table {border-collapse: collapse; width: 100%;}
 /* 목록요소에 숫자, 불릿기호 없애기 */
 ol,ul {list-style: none;}
 
-/* 링크및에 밑줄 없애기, 글자색 기본색 지정 */
+/* 링크밑에 밑줄 없애기, 글자색 기본색 지정 */
 a {text-decoration: none; color: #000;}
 
 /* 글자 기울임 설정 */
 address {font-style: normal;}
 
 /* 폼태그 초기화 */
-fieldset,input,textarea,select { outline: none; appearance: none; border: 0; } /* 클릭했을때 테투리 없애기, select 화살표 없애기, 기본테두리 없애기 */
+fieldset,input,textarea,select { vertical-align: middle; outline: none; border: 0; } /* vertical-align: middle;은 폼태그와 이미지에만 쓸 수 있음(라인 맞추기 위해), 클릭했을때 테투리 없애기, 기본테두리 없애기, select 화살표 없애기 appearance: none; */
 legend { display: none; }

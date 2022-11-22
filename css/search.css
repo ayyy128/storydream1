@@ -1,0 +1,158 @@
+@charset "utf-8";
+
+body {  font-family: 'S-CoreDream', sans-serif; font-size: 1.6rem; line-height: 1.5; color: #000; overflow-x: hidden; }
+.clearfix:after { content: ''; display: block; clear: both; }
+
+
+#wrap { overflow-x: hidden; }
+.inner { max-width: calc(100% - 693px); margin: 0 auto; } /* 지정된 사이즈 */
+.inner_100 { max-width: 100%; margin: 0 auto; } /* 100% 사이즈 */
+
+@media (max-width:1600px) {
+    .inner { max-width: calc(100% - 160px); }
+}
+
+@media (max-width:1400px) {
+    .inner { max-width: calc(100% - 140px); }
+}
+
+@media (max-width:1200px) {
+    .inner { max-width: calc(100% - 120px); }
+}
+
+@media (max-width:1024px) {
+    .inner { max-width: calc(100% - 100px); }
+}
+
+@media (max-width:768px) {
+    .inner { max-width: calc(100% - 40px); }
+}  /* 모바일 */
+
+@media (max-width:320px) {
+    .inner { max-width: calc(100% - 20px); }
+}
+
+/* header */
+#header { color: #2B1803; height: 64px; border-bottom: 1px solid #ddd; }
+#header .inner { height: 64px; align-items: center; display: flex; justify-content: space-between; position: relative; } /* 가로배치, 높이 값 주고 세로 중앙정렬 */
+#header h1 img { display: block; width: 90px; padding-top: 11px; } /* line-height값 제거 */
+
+#header .gnb { margin-left: 30px; }
+
+#header .gnb_left { display: flex; justify-content: space-between; }
+#header .gnb > li { float: left; position: relative; z-index: 999; } /* or 인라인 블럭 씀 */
+
+#header .gnb > li:nth-child(3) > a { font-weight: 700; color: #2B1803; }
+#header .gnb > li .paper { font-weight: 700; color: #2B1803; }
+
+#header .gnb > li > a { display: block; padding: 5px 30px 5px; font-size: 1.6rem; font-weight: 400; } 
+
+#header .gnb_right { font-size: 1.2rem; width: 85px; height: 33px; background: #2b1803; border-radius: 10px; color: #fff; font-weight: 500; }
+
+#header .gnb_right p { text-align: center; padding-top: 6px; }
+
+#header.fix { width: 100%; z-index: 9999999; height: 64px; position: fixed; left: 0; top: 0; background: #fff; }
+
+@media (max-width:1000px) {
+    #header { height: 55px; } 
+    #header .inner { height: 55px; }
+    #header .gnb > li { display: none; }
+    #header .gnb_right { display: none; }
+
+    #header.fix {  height: 55px; }
+}
+
+
+/* mgnb */
+#header .mgnb { display: none; text-align: center; line-height: 1.2; position: fixed; bottom: 0; left: 0; width: 100%; border-top: 1px solid #ddd; z-index: 99999999; }
+#header .mgnb li:nth-child(1) img { height: 24px; }
+#header .mgnb li:nth-child(3) img { filter: invert(55%) sepia(90%) saturate(460%) hue-rotate(353deg) brightness(97%) contrast(97%); }
+#header .mgnb img { width: 24px; height: 24px; }
+#header .mgnb ul { display: flex; justify-content: center; background: #FFF; }
+#header .mgnb ul li a { display: block; padding: 10px 28px; font-size: 1.2rem; color: #2B1803; }
+#header .mgnb ul li:nth-child(3) a { color: #F39414;  }
+
+@media (max-width:1000px) {
+    #header .mgnb { display: block; }
+}
+
+@media (max-width:700px) {
+    #header .mgnb { font-size: 0.8rem; }
+    #header .mgnb li:nth-child(1) img { height: 20px; }
+    #header .mgnb img { width: 20px; height: 20px; }
+    #header .mgnb ul li a { padding: 10px 20px; font-size: 1.0rem; }
+}
+
+/* container */
+#container h2 { font-size: 2.0rem; margin-bottom: 20px; }
+
+@media (max-width:1000px) {
+    #container h2 { font-size: 1.8rem; }
+}
+
+
+/* search */
+#search .search_box { height: 60px; border-bottom: 1px solid #ddd; }
+#search .inner { margin-top: 20px; }
+#search .bi-search { font-size: 2.0rem; padding-right: 15px; font-weight: 800; cursor: pointer; }
+#search .search_box input { font-size: 2.0rem; font-weight: 600; }
+#search input::placeholder { color: #999 }
+
+
+@media (max-width:1000px) {
+    #search .search_box { height: 43px; }
+    #search .inner { margin-top: 13px; }
+    #search .bi-search { font-size: 1.8rem; }
+    #search .search_box input { font-size: 1.8rem; }
+ 
+}
+
+/* #search_ex */
+#search_ex { padding-top: 30px; }
+#search_ex .ex_list li { display: inline-block; padding:0 10px 15px 0 ; }
+
+#search_ex .ex_list li > a { border-radius: 36px; display: block; padding: 8px 12px; font-weight: 400;
+font-size: 1.4rem; line-height: 24px; border: 1px solid #CBC1B7; }
+
+#search_ex .ex_list li:hover > a { border: 1px solid #2B1803; }
+
+@media (max-width:1000px) {
+    #search_ex .ex_list li { padding:0 8px 13px 0 ; }
+
+#search_ex .ex_list li > a { padding: 6px 10px;
+font-size: 1.3rem; }
+}
+
+
+
+/* dream_best */
+#dream_best { padding-top: 30px; }
+#dream_best .best_all { overflow: hidden; width: 1227px; }
+#dream_best .best ul { width: 327PX; position: relative; }
+#dream_best .best ul li { display: inline-block; }
+#dream_best .best ul li .book_txt { position: absolute; left: 120PX; top: 28%; }
+#dream_best .book_img { padding-bottom: 10px; }
+#dream_best .book_txt .number { font-size: 2.0rem; font-weight: 600; }
+#dream_best .book_txt .b_name { font-size: 1.5rem; }
+#dream_best .book_txt .name { font-size: 1.3rem; color: #666; position: absolute; left: 17px; top: 105%; }
+
+/* category */
+#category { padding:30px 0 80px; }
+#category .category-list { display: flex; justify-content: space-between; flex-wrap: wrap; }
+#category .category-list li { border: 1px solid #CBC1B7; border-radius: 10px; width: calc((100% - 10px)/2); height: 126px; height: 135px; overflow: hidden; }
+#category .category_txt { font-size: 2.0rem; color: #000; float: left; width: 78%; padding: 23px; }
+#category .category_txt p { font-size: 1.4rem; color: #666; margin-top: 12px; }
+#category .category_txt .more { display: none; }
+#category .category_img { float: right; width: 22%;transform: rotate(15deg); }
+
+@media (max-width:1000px) {
+    #category .category-list li { width: calc(100% - 10px); margin: 0 auto; height: 120px; margin-bottom: 10px; }
+    #category .category_txt { font-size: 1.8rem; padding: 20px; }
+    #category .category_txt p { font-size: 1.3rem; margin-top: 12px; }
+}
+
+@media (max-width:700px) {
+    #category .category_txt br { display: block; }
+    #category .category_txt .more { display: inline-block; }
+    #category .category_txt .more_none { display: none; }
+}

@@ -5,258 +5,1269 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>카페 바라보다</title>
+    <title>STORYDREAM</title>
 
-    <!-- open graph -->
+    <!--opengraph-->
     <!-- 모든 html문서에 다 들어가야 한다 -->
-    <meta property="og:title" content="카페 바라보다">
-    <meta property="og:url" content="http://www.barboda.com">
-    <meta property="og:description" content="사람과 기억 그리고 커피
-    모두가 추억이 되는 그 곳, 바라보다">
-    <meta property="og:image" content=""> <!-- 이미지 가로세로 비율 2:1-->
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="STORYDREAM">
+    <meta property="og:url" content="http://test.dothome.co.kr">
+    <meta property="og:image" content="images/common/og_img.jpg"><!-- 2:1사이즈 -->
+    <meta property="og:description" content="한 손에 들어오는 판타지 스토리 드림, STORTSREAM">
 
     <!-- favicon -->
-    <link rel="shortcut icon" href="">
     <!--사이즈 16*16 .ico로 작성-->
+    <link rel="shortcut icon" href="images/common/storydream_favi.ico">
 
     <!-- font -->
-    <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+KR:wght@200;300;400;500;600;700;900&display=swap"
-        rel="stylesheet">
+    <link href="css/font.css" rel="stylesheet"> <!-- 한글 -->
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@700;800&display=swap" rel="stylesheet">
+    <!-- 영문 -->
 
     <!-- CSS -->
     <link href="css/common.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css">
+    <!-- 아이콘 CDN빙식으로 적용-->
     <link href="css/swiper-bundle.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" /> <!-- aos -->
     <link href="css/main.css" rel="stylesheet">
 
     <!-- js -->
     <script src="js/jquery-3.6.0.min.js"></script>
     <script src="js/swiper-bundle.min.js"></script>
-    <script src="js/main.js"></script>
-
-
+    <script src="js/common.js"></script>
 </head>
 
 <body>
+
     <div id="wrap">
-        <header id="header" class="fix">
+
+        <header id="header">
             <div class="inner">
-                <h1><a href="#"><img src="images/logo_baraboda.png" alt="바라보다"></a></h1>
 
-                <nav>
-                    <ul class="gnb">
-                        <li><a href="#">바라보다</a></li>
-                        <li><a href="#">만나다</a></li>
-                        <li><a href="#">쇼핑하다</a></li>
-                        <li><a href="#">마주보다</a></li>
-                        <li><a href="#">정기배송</a></li>
-                        <li><a href="#">공지사항</a></li>
-                        <li><a href="#">이벤트</a></li>
-                    </ul><!-- gnb -->
+                <div class="gnb_left clearfix">
 
-                    
-                    <div class="ham"><span>모바일메뉴보기</span></div><!-- ham 텍스트 들어가야함-->
-                
-                    <div class="mgnb_wrap">
-                        <div class="mgnb">
-                            <ul>
-                                <li><a href="#">바라보다</a></li>
-                                <li><a href="#">만나다</a></li>
-                                <li><a href="#">쇼핑하다</a></li>
-                                <li><a href="#">마주보다</a></li>
-                                <li><a href="#">정기배송</a></li>
-                                <li><a href="#">공지사항</a></li>
-                                <li><a href="#">이벤트</a></li>
-                            </ul>
-                            <div class="close">close</div><!-- close -->
-                        </div><!-- mgnb -->
-                    </div><!-- mgnb_wrap -->
-                </nav>
+                    <h1><a href="index.html"><img src="images/common/logo.png" alt="스토리드림">
+                        </a></h1><!-- ./라고 쓰기도 함(현재페이지 라는 뜻) -->
 
-                <ul class="util">
-                    <li><a href="#"><img src="images/util_ico_01.svg" alt="로그인"></a></li>
-                    <li><a href="#"><img src="images/util_ico_02.svg" alt="장바구니"></a></li>
-                    <li><a href="#"><img src="images/util_ico_03.svg" alt="검색"></a></li>
-                </ul><!-- util -->
+                    <nav>
+                        <ul class="gnb clearfix">
+                            <li><a href="index.html">Story</a>
+                                <ul class="depth2 clearfix">
+                                    <li class="paper"><a href="index.html">페이퍼북</a></li>
+                                    <li class="audio"><a href="sub/audio.html">오디오북</a></li>
+                                </ul><!-- depth2 clearfix -->
+                            </li>
+
+                            <li><a href="sub/community.html">커뮤니티</a></li>
+                            <li><a href="sub/search.html">검색</a></li>
+                            <li><a href="sub/library.html">내서재</a></li>
+                            <li><a href="sub/my.html">관리</a></li>
+                        </ul>
+                    </nav>
+
+                </div><!-- gnb_left -->
+
+                <div class="gnb_right">
+                    <p>로그인</p>
+                </div><!-- gnb_right -->
 
             </div><!-- inner -->
-        </header><!-- header -->
+            <div class="depth2_bg"></div>
 
-        <div class="search">
-            <form>
-                <fieldset>
-                    <legend>검색영역</legend>
-                    <div class="inner">
-                    <input type="text" placeholder="검색어를 입력해 주세요!"><input type="submit" value="검색"><!-- 두 요소 붙여 써야 붙어서 나옴 -->
-                </div><!-- inner -->
-                </fieldset>
-            </form>
-            <div class="search_close"><span>검색닫기</span></div><!-- search_close -->
-        </div><!-- search -->
+
+            <div class="mdepth2">
+                <ul class="clearfix">
+                    <li class="paper"><a href="index.html">페이퍼북</a></li>
+                    <li class="audio"><a href="sub/audio.html">오디오북</a></li>
+                </ul>
+            </div>
+
+            <div class="mgnb">
+                <ul class="clearfix">
+                    <li><a href="index.html"><img src="images/common/logo_4.png" alt="로고"><br>Story</a>
+                    </li>
+                    <li><a href="sub/community.html"><img src="images/main/community.png" alt="커뮤니티 아이콘"><br>커뮤니티</a>
+                    </li>
+                    <li><a href="sub/search.html"><img src="images/main/search.png" alt="검색 아이콘"><br>검색</a></li>
+                    <li><a href="sub/library.html"><img src="images/main/library.png" alt="내서재 아이콘"><br>내서재</a></li>
+                    <li><a href="sub/my.html"><img src="images/main/my.png" alt="마이 아이콘"><br>마이</a></li>
+                </ul>
+            </div><!-- mgnb -->
+
+        </header><!-- header -->
 
 
         <main id="container">
+            <section id="main_banner">
+                <div class="inner_100">
 
-            <section id="main_visual">
-
-                <img src="images/main_visual_01.png" alt="카페 바라보다 전경사진">
-
-                <div class="mv_txt">
-                    <h2>사람과 기억 그리고 커피<br>
-                        모두가 추억이 되는 그 곳, 바라보다<br>
-                        <span>Baraboda Coffee and Roaster
-                        </span>
-                    </h2>
-                </div><!-- mv_txt -->
-
-            </section><!-- main_visual -->
-
-            <section id="story">
-                <div class="inner">
-                    <div class="subtitle">
-
-                        <h2>Baraboda Brand Story</h2>
-                        <h3>사람과 기억<br>
-                            그리고 커피, 모두가<br>
-                            추억이 되는 곳</h3>
-                        <p>커피와 일상이 만나는 방법에 대해 오랫동안 고민해 온 우리는<br>
-                            2016년 어느 날, 나무가 있고 바람이 기분좋게 부는 곳에서 시작되었습니다.<br>
-                            그리고 더 가까이에서 바라보기 위해 바라보다 스페셜티를 온라인에서 선보입니다.<br>
-                            처음 시작했던 설레는 그 마음을 담아 오늘도 당신을 만나러 갑니다.
-                        </p>
-                    </div><!-- inner -->
-
-                    <ul>
-                        <li><img src="images/story_01.png" alt="카페 바라보다 위치">
-                            <dl>
-                                <dt>MEET BARABODA</dt>
-                                <dd>카페 바라보다의 위치를 확인하세요.</dd>
-                                <dd><a href="#">view more</a> </dd>
-                            </dl>
-                        </li>
-
-                        <li><img src="images/story_02.png" alt="카페 바라보다 홈카페">
-                            <dl>
-                                <dt>MEET BARABODA</dt>
-                                <dd>카페 바라보다의 위치를 확인하세요.</dd>
-                                <dd><a href="#">view more</a> </dd>
-                            </dl>
-                        </li>
-
-                        <li><img src="images/story_03.png" alt="카페 바라보다 로스팅 ">
-                            <dl>
-                                <dt>MEET BARABODA</dt>
-                                <dd>카페 바라보다의 위치를 확인하세요.</dd>
-                                <dd><a href="#">view more</a></dd>
-                            </dl>
-                        </li>
-
-
-                    </ul>
-                </div><!-- subtitle -->
-
-            </section><!-- story -->
-
-            <section id="product">
-                <div class="inner">
-                    <div class="subtitle">
-                        <h2>Baraboda Specialty Coffee</h2>
-                        <h3>커피를 바라보다</h3>
-                        <p>'바라보다'가 제공하는 좋은 원두가 아름다운 공간에서<br>
-                            향기로운 커피 한잔과 함께 당신에게 소중한 추억이 될 수 있기를 바라봅니다.</p>
-                        <a href="#">view more</a>
-                    </div><!-- subtitle -->
-
-                    <div class="swiper product_list">
-
+                    <div class="swiper mb">
                         <ul class="swiper-wrapper">
-                            <li class="swiper-slide">
-                                <a href="#">
-                                    <img src="images/product_01.jpg" alt="에티오피아 예가체프">
-                                    <dl>
-                                        <dt>에티오피아 예가체프</dt>
-                                        <dd>13,000원</dd>
-                                    </dl>
-                                </a>
-                            </li><!-- swiper-slide -->
+                            <li class="swiper-slide mb1"><a href="sub/all.html">
+                                    <div class="inner">
+                                        <div class="mb_txt">
+                                            <p>알약을 함부로 섭취하지 마세요.<br>
+                                                기묘하고 따뜻한 사랑이야기</p>
+                                        </div><!-- mb_txt -->
+                                        <img src="images/main/banner1.jpg" alt="아라의 소설">
+                                    </div>
+                                </a></li><!-- swiper-slide mb1" -->
 
-                            <li class="swiper-slide">
-                                <a href="#">
-                                    <img src="images/product_02.jpg" alt="과테말라 와이칸">
-                                    <dl>
-                                        <dt>과테말라 와이칸</dt>
-                                        <dd>13,000원</dd>
-                                    </dl>
-                                </a>
-                            </li><!-- swiper-slide -->
-
-                            <li class="swiper-slide">
-                                <a href="#">
-                                    <img src="images/product_03.jpg" alt="인도네시아 수마트라">
-                                    <dl>
-                                        <dt>인도네시아 수마트라</dt>
-                                        <dd>13,000원</dd>
-                                    </dl>
-                                </a>
-                            </li><!-- swiper-slide -->
-
-                            <li class="swiper-slide">
-                                <a href="#">
-                                    <img src="images/product_04.jpg" alt="콜롬비아 수프리모">
-                                    <dl>
-                                        <dt>콜롬비아 수프리모</dt>
-                                        <dd>13,000원</dd>
-                                    </dl>
-                                </a>
-                            </li><!-- swiper-slide -->
+                            <li class="swiper-slide mb2"><a href="sub/all.html">
+                                    <div class="inner">
+                                        <div class="mb_txt">
+                                            <p>모두가 무심히 지나치는 특별함을<br>
+                                                알아봐 주는 순간</p>
+                                        </div><!-- mb_txt -->
+                                        <img src="images/main/banner2.jpg" alt="보테로 가족의 사랑 약국">
+                                    </div>
+                                </a></li><!-- swiper-slide mb2" -->
 
                         </ul><!-- swiper-wrapper -->
 
-                        <div class="swiper-button-prev"></div>
-                        <div class="swiper-button-next"></div>
+                        <div class="swiper-button-next arrow next"></div><!-- 방향버튼 -->
+                        <div class="swiper-button-prev arrow prev"></div><!-- 방향버튼 -->
 
-                    </div><!-- swiper -->
-                </div><!-- inner -->
+                        <div class="swiper-pagination"></div><!-- 밑에 슬라이드 표시 -->
 
-            </section><!-- product -->
+                    </div><!-- swiper mb -->
 
-            <section id="review">
+                </div><!-- nner_100 -->
+            </section><!-- main_banner -->
 
-                <div class="subtitle">
-                    <h2>Baraboda Coffee Review</h2>
-                    <h3>마주보다</h3>
-                    <p>우리는 커피를 사랑하는 사람들과 함께 성장합니다.
-                        바라보다와 함께한 당신의 이야기를 들려주세요.</p>
-                    <a href="#">view more</a>
-                </div><!-- subtitle -->
 
+            <section id="today">
                 <div class="inner">
-                    <video src="images/review.mp4" muted autoplay loop controls></video> <!-- 음소거 + 자동재생 반복 컨트롤바 -->
-                </div><!-- inner -->
 
-            </section><!-- review -->
+                    <div class="today_txt">
+                        <h2 class="txt_1">
+                            <span>나는</span>
+                            <select class="option1">
+                                <option value="opt1_1" selected="selected">완독할 확률이 높은<i class="bi bi-chevron-down"></i></option>
+                                <option value="opt1_2">완독예상 시간이 짧은<i class="bi bi-chevron-down"></i>
+                                </option>
+                            </select><br>
 
-        </main><!-- container -->
+                            <select class="option2">
+                                <option value="opt2_1" selected="selected">오늘<i class="bi bi-chevron-down"></i></option>
+                                <option value="opt2_2">한달<i class="bi bi-chevron-down"></i></option>
+                            </select>
+                            <span>드림이 들이많이 읽은<br class="none">판타지 소설을 알고 싶어요.</span>
+
+                        </h2><!-- txt_2 -->
+
+                        <div class="day_all">
+
+                            <div class="swiper up_today view1">
+                             
+                                <ul class="swiper-wrapper">
+                                    <li class="swiper-slide bg1"><a href="sub/all.html">
+                                            <p>여왕 살해사건의 유력 용의자?<br>
+                                                "내가 선택한 금지된 사랑"
+                                            </p>
+                                            <img src="images/main/section1-1_1.jpg" alt="라스트새크리피스">
+                                            <p class="info">완독할 확률 96%<br>
+                                                완독예상 시간 242분</p>
+                                        </a></li>
+
+                                    <li class="swiper-slide bg2"><a href="sub/all.html">
+                                            <p>그 돌은 단순한 돌이 아니었다.<br>
+                                                그 돌이 전해준 기이한 능력들은...
+                                            </p>
+                                            <img src="images/main/section1-1_2.jpg" alt="행운을 주는 돌 1권">
+                                            <p class="info">완독할 확률 82%<br>
+                                                완독예상 시간 123분</p>
+                                        </a></li>
+
+                                    <li class="swiper-slide bg3"><a href="sub/all.html">
+                                            <p>'얼음나무 숲'에 이어 돌아온<br>
+                                                하지은 작가의 판타지 스릴러
+                                            </p>
+                                            <img src="images/main/section1-1_3.jpg" alt="언제나 밤인 세게">
+                                            <p class="info">완독할 확률 75%<br>
+                                                완독예상 시간 300분</p>
+                                        </a></li>
+
+                                    <li class="swiper-slide bg4"><a href="sub/all.html">
+                                            <p>100만 독자를 사로잡은<br>
+                                                그 두번째 이야기
+                                            </p>
+                                            <img src="images/main/section1-1_4.jpg" alt="달러구트 꿈 백화점2">
+                                            <p class="info">완독할 확률 62%<br>
+                                                완독예상 시간 31분</p>
+                                        </a></li>
+
+                                    <li class="swiper-slide bg5"><a href="sub/all.html">
+                                            <p>손님들의 의뢰를 해결해주는<br>
+                                                '시간을 파는 상점'
+                                            </p>
+                                            <img src="images/main/section1-1_5.jpg" alt="시간을 파는 상점">
+                                            <p class="info">완독할 확률 67%%<br>
+                                                완독에상 시간 200분</p>
+                                        </a></li>
+
+                                    <li class="swiper-slide bg6"><a href="sub/all.html">
+                                            <p>전 세게 1억 부 판매 신화<br>
+                                                가장 스펙타클한 원정이 시작된다!
+                                            </p>
+                                            <img src="images/main/section1-1_6.jpg" alt="반지의 제왕1-반지원정대">
+                                            <p class="info">완독할 확률 46%<br>
+                                                완독예상 시간 432분</p>
+                                        </a></li>
+
+                                </ul><!-- up_today -->
+
+                            </div><!-- swiper -->
+
+                            <div class="swiper up_month view2">
+                           
+                                <ul class="swiper-wrapper">
+
+                                    <li class="swiper-slide bg1"><a href="sub/all.html">
+                                            <p>여왕 살해사건의 유력 용의자?<br>
+                                                "내가 선택한 금지된 사랑"</p>
+                                            <img src="images/main/section1-2_1.jpg" alt="라스트새크리피스">
+                                            <p class="info">완독할 확률 96%<br>
+                                                완독예상 시간 242분</p>
+                                        </a></li>
+
+                                    <li class="swiper-slide bg2"><a href="sub/all.html">
+                                            <p>라스트 새크리피스<br>
+                                                그 세번째 이야기</p>
+                                            <img src="images/main/section1-2_2.jpg" alt="블러드 프롬이즈">
+                                            <p class="info">완독할 확률 95% <br>
+                                                완독예상 시간 216분</p>
+                                        </a></li>
+
+                                    <li class="swiper-slide bg3"><a href="sub/all.html">
+                                            <p>왜 인강병기가 필요했는지<br>
+                                                이유를 묻고 벌하리라.
+                                            </p>
+                                            <img src="images/main/section1-2_3.jpg" alt="폭류신공">
+                                            <p class="info">완독할 확률 95%<br>
+                                                완독예상 시간 137분</p>
+                                        </a></li>
+
+                                    <li class="swiper-slide bg4"><a href="sub/all.html">
+                                            <p>라스트 새크리피스<br>
+                                                그 두번째 이야기
+                                            </p>
+                                            <img src="images/main/section1-2_4.jpg" alt="스프릿 바운드">
+                                            <p class="info">완독할 확률 95%<br>
+                                                완독예상 시간 211분</p>
+                                        </a></li>
+
+                                    <li class="swiper-slide bg5"><a href="sub/all.html">
+                                            <p>디즈니가 선택한 로맨틱 판타지<br>
+                                                "최고의 마법은 사랑이다!"
+                                            </p>
+                                            <img src="images/main/section1-2_5.jpg" alt="시어니 트윌과 대마법사">
+                                            <p class="info">완독할 확률 93%<br>
+                                                완독예상 시간 183분</p>
+                                        </a></li>
+
+                                    <li class="swiper-slide bg6"><a href="sub/all.html">
+                                            <p>절대자 앞에서 영약사 금오의 <br>
+                                                엽기행각이 시작된다.
+                                            </p>
+                                            <img src="images/main/section1-2_6.jpg" alt="영약사 금오">
+                                            <p class="info">완독할 확률 94%<br>
+                                                완독예상시간 178분</p>
+                                        </a></li>
 
 
-        <footer id="footer">
-            <div class="inner">
-                <div class="footer_logo">
-                    <img src="images/logo_baraboda.png" alt="카페 바라보다 로고">
+                                </ul><!-- up_month -->
+                            </div><!-- swiper -->
+
+                            <div class="swiper short_today view3">
+
+                                <ul class="swiper-wrapper">
+
+                                    <li class="swiper-slide bg1"><a href="sub/all.html">
+                                            <p>신비한 마법 보물들과<br>
+                                                보물을 가진 형제들의 지혜!
+                                            </p>
+                                            <img src="images/main/section1-3_1.jpg" alt="아그라바 왕국의 마법형제들">
+                                            <p class="info">완독할 확률 83%<br>
+                                                완독예상시간 7분</p>
+                                        </a></li>
+
+                                    <li class="swiper-slide bg2"><a href="sub/all.html">
+                                            <p>무술대회에서 우승하고 황제의<br>
+                                                밀명을 받을 수 있을 것인가?
+                                            </p>
+                                            <img src="images/main/section1-3_2.jpg" alt="드래곤 데빌1">
+                                            <p class="info">완독할 확률 30% <br>
+                                                완독예상시간 21분</p>
+                                        </a></li>
+
+                                    <li class="swiper-slide bg3"><a href="sub/all.html">
+                                            <p>인어를 키우신다면서요?<br>
+                                                한번 보여 주실 수 있습니까?
+                                            </p>
+                                            <img src="images/main/section1-3_3.jpg" alt="동화의 연장성">
+                                            <p class="info">완독할 확률 75%<br>
+                                                완독예상 시간 28붘</p>
+                                        </a></li>
+
+                                    <li class="swiper-slide bg4"><a href="sub/all.html">
+                                            <p>남편을 사고로 잃은 유하.<br>
+                                                다른세계로 가게 되는데...
+                                            </p>
+                                            <img src="images/main/section1-3_4.jpg" alt="한낮에 뜨는 달1권">
+                                            <p class="info">완독할 확률 71%<br>
+                                                완독예상 시간 29분</p>
+                                        </a></li>
+
+                                    <li class="swiper-slide bg5"><a href="sub/all.html">
+                                            <p>간니닌니의 환상의 동화 <br>
+                                                나라 모험이 시작된다!
+                                            </p>
+                                            <img src="images/main/section1-3_5.jpg" alt="간니닌니 마법의 도서관5: 빨간 머리 앤">
+                                            <p class="info">완독확률 84%<br>
+                                                완독예상 시간 30분</p>
+                                        </a></li>
+
+                                    <li class="swiper-slide bg6"><a href="sub/all.html">
+                                            <p>100만 독자를 사로잡은<br>
+                                                그 두번째 이야기
+                                            </p>
+                                            <img src="images/main/section1-3_6.jpg" alt="달러구트 꿈 백화점2">
+                                            <p class="info">완독할 확률 62%<br>
+                                                완독예상 시간 31분</p>
+                                        </a></li>
+
+
+                                </ul><!-- short_today -->
+                            </div><!-- swiper -->
+
+                            <div class="swiper short_month view4">
+
+                                <ul class="swiper-wrapper">
+
+                                    <li class="swiper-slide bg1"><a href="sub/all.html">
+                                            <p>100만 독자를 사로잡은<br>
+                                                그 두번째 이야기
+                                            </p>
+                                            <img src="images/main/section1-4_1.jpg" alt="달러구트 꿈 백화점2">
+                                            <p class="info">완독할 확률 62%<br>
+                                                완독예상 시간 31분</p>
+                                        </a></li>
+
+                                    <li class="swiper-slide bg2"><a href="sub/all.html">
+                                            <p>간니닌니의 환상의 동화 <br>
+                                                나라 모험이 시작된다!
+                                            </p>
+                                            <img src="images/main/section1-4_2.jpg" alt="간니닌니 마법의 도서관5: 빨간 머리 앤">
+                                            <p class="info">완독확률 84%<br>
+                                                완독예상 시간 30분</p>
+                                        </a></li>
+
+                                    <li class="swiper-slide bg3"><a href="sub/all.html">
+                                            <p>제국 간 패권 다툼과 <br>
+                                                빛나는 영웅의 활약.
+                                            </p>
+                                            <img src="images/main/section1-4_3.jpg" alt="트리얀의 늑대1">
+                                            <p class="info">완독할 확률 70%<br>
+                                                완독예상 시간 38분</p>
+                                        </a></li>
+
+                                    <li class="swiper-slide bg4"><a href="sub/all.html">
+                                            <p>빛나는 사랑 아래 전하는<br>
+                                                중학생 작가의 다정한 위로
+                                            </p>
+                                            <img src="images/main/section1-4_4.jpg" alt="보이지 않는 신에게 사랑 받는 법">
+                                            <p class="info">완독할 확률 54%<br>
+                                                완독예상 시간 82분</p>
+                                        </a></li>
+
+                                    <li class="swiper-slide bg5"><a href="sub/all.html">
+                                            <p>그래도 역시 농구가 좋아!</p>
+                                            <img src="images/main/section1-4_5.jpg" alt="농구의 신">
+                                            <p class="info">완독확률 61%<br>
+                                                완독예상 시간 97분</p>
+                                        </a></li>
+
+                                    <li class="swiper-slide bg6"><a href="sub/all.html">
+                                            <p>스팀펑크의 진수를 만낄할<br>
+                                                액션 뱀파이어 시리즈1
+                                            </p>
+                                            <img src="images/main/section1-4_6.jpg" alt="뱀파이어 제국1">
+                                            <p class="info">완독할 확률 52%<br>
+                                                완독예상시간 97분</p>
+                                        </a></li>
+
+
+                                </ul><!-- short_month -->
+                            </div><!-- swiper -->
+
+                        </div><!-- day_all -->
+                    </div><!-- txt_1 -->
+
+
+                </div><!-- today_txt -->
+
+    </div><!-- inner -->
+    </section><!-- today -->
+
+    <section id="community">
+        <div class="inner">
+
+            <h2>드림이 선택한 판타지</h2>
+
+            <div class="community_all">
+
+            <div class="swiper review">
+                <ul class="swiper-wrapper">
+
+                    <li class="swiper-slide"><a href="sub/community.html">
+                            <img src="images/main/section2-1.jpg" alt="여기는 커스터드,특별한 도시락을 팝니다. 리뷰">
+                    </li></a><!-- swiper-slide -->
+
+                    <li class="swiper-slide"><a href="sub/community.html">
+                            <img src="images/main/section2-2.jpg" alt="수상한 중고상점 리뷰">
+                    </li></a><!-- swiper-slide -->
+
+                    <li class="swiper-slide">
+                        <img src="images/main/section2-3.jpg" alt="아라의 소설 리뷰">
+                    </li><!-- swiper-slide-->
+
+                    <li class="swiper-slide"><a href="sub/community.html">
+                            <img src="images/main/section2-4.jpg" alt="달러구트 꿈 백화점 리뷰">
+                    </li></a><!-- swiper-slide  -->
+
+                    <li class="swiper-slide"><a href="sub/community.html">
+                            <img src="images/main/section2-5.jpg" alt="책 들의 부엌 리뷰">
+                    </li></a><!-- swiper-slide  -->
+
+                    <li class="swiper-slide"><a href="sub/community.html"></a>
+                        <img src="images/main/section2-6.jpg" alt="보테로 가족의 사랑 약국 리뷰">
+                    </li></a><!-- swiper-slide  -->
+
+                </ul><!-- swiper-wrapper -->
+            </div><!-- swiper mb -->
+            </div><!-- community_all -->
+
+        </div><!-- inner -->
+    </section><!-- community -->
+
+    <section id="dream_best">
+        <div class="inner">
+            <h2>NOW! 드림 베스트 <span class="standard">2022.00.00 기준</span></h2>
+
+            <div class="dream_best_all">
+
+            <div class="swiper best_all">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide best_list1">
+                        <div class="best">
+                            <dl>
+                                <dt>
+                                    <div class="book_img">
+                                        <img src="images/main/section3-01-1.jpg" alt="이상한 과자가게 전천당">
+                                    </div><!-- book_img" -->
+
+                                    <div class="book_txt">
+                                        <span class="number">1</span> <span class="b_name">이상한 과자가게 전천당
+                                            &middot;&middot;&middot; </span><br>
+                                        <span class="change"><img src="images/main/Line.png" alt="선"></span> <span
+                                            class="name">히로시마 레이코</span>
+                                    </div><!-- book_txt -->
+                                </dt>
+
+                                <dd><a href="sub/all.html">
+                                        <div class="txt_1">아마존재팬어린이 판타지분야1위</div>
+                                        <div class="txt_2">투니버스 방영중인 애니메이션</div>
+                                        <img src="images/main/section3-01.jpg" alt="이상한 과자가게 전천당">
+                                    </a></dd>
+                            </dl>
+                        </div><!-- best -->
+
+                        <div class="best">
+                            <dl>
+                                <dt>
+                                    <div class="book_img">
+                                        <img src="images/main/section3-02-1.jpg" alt="달러구트 꿈 백화점">
+                                    </div><!-- book_img" -->
+
+                                    <div class="book_txt">
+                                        <span class="number">2</span> <span class="b_name">달러구트 꿈 백화점</span><br>
+                                        <span class="change"><img src="images/main/Line.png" alt="선"></span> <span
+                                            class="name">이미예</span>
+                                    </div><!-- book_txt -->
+                                </dt>
+
+                                <dd><a href="sub/all.html">
+                                        <div class="txt_1">잠이 들어야만 입장이 가능합니다.</div>
+                                        <div class="txt_2">꿈을 파는 백화점 이야기</div>
+                                        <img src="images/main/section3-02.jpg" alt="달러구트 꿈 백화점">
+                                    </a></dd>
+                            </dl>
+                        </div><!-- best -->
+
+                        <div class="best">
+                            <dl>
+                                <dt>
+                                    <div class="book_img">
+                                        <img src="images/main/section3-03-1.jpg" alt="아라의 소설">
+                                    </div><!-- book_img" -->
+
+                                    <div class="book_txt">
+                                        <span class="number">3</span> <span class="b_name">아라의 소설</span><br>
+                                        <span class="change"><img src="images/main/Line.png" alt="선"></span> <span
+                                            class="name">정세랑</span>
+                                    </div><!-- book_txt -->
+                                </dt>
+
+                                <dd><a href="sub/all.html">
+                                        <div class="txt_1">올해의 작가 정세량의 미니 픽션</div>
+                                        <div class="txt_2">각자의 색으로 빛나는 우리의 이야기</div>
+                                        <img src="images/main/section3-03.jpg" alt="아라의 소설">
+                                    </a></dd>
+                            </dl>
+                        </div><!-- best -->
+
+                    </div><!-- swiper-slide best_list1 -->
+
+
+                    <div class="swiper-slide best_list2">
+                        <div class="best">
+                            <dl>
+                                <dt>
+                                    <div class="book_img">
+                                        <img src="images/main/section3-04-1.jpg" alt="여기는 커스터드,특별한">
+                                    </div><!-- book_img" -->
+
+                                    <div class="book_txt">
+                                        <span class="number">4</span> <span class="b_name">여기는 커스터드,특별한
+                                            &middot;&middot;&middot; </span><br>
+                                        <span class="change"><img src="images/main/up.png" alt="업"><span class="up">2</span></span> <span
+                                            class="name">가토 겐</span>
+                                    </div><!-- book_txt -->
+                                </dt>
+
+                                <dd><a href="sub/all.html">
+                                        <div class="txt_1">길을 잃을 때면 이곳으로오세요 </div>
+                                        <div class="txt_2">동네 서점이 주목한 기대작!</div>
+                                        <img src="images/main/section3-04.jpg" alt="여기는 커스터드,특별한">
+                                    </a></dd>
+                            </dl>
+                        </div><!-- best -->
+
+                        <div class="best">
+                            <dl>
+                                <dt>
+                                    <div class="book_img">
+                                        <img src="images/main/section3-05-1.jpg" alt="달러구트 꿈 백화점2">
+                                    </div><!-- book_img" -->
+
+                                    <div class="book_txt">
+                                        <span class="number">5</span> <span class="b_name">달러구트 꿈 백화점2</span><br>
+                                        <span class="change"><img src="images/main/down.png" alt="down"><span class="down">2</span></span><span
+                                            class="name">이미예</span>
+                                    </div><!-- book_txt -->
+                                </dt>
+
+                                <dd><a href="sub/all.html">
+                                        <div class="txt_1">1년 내내 베스트셀러 1위</div>
+                                        <div class="txt_2">100만 독자를 사로잡은 꿈 백화점</div>
+                                        <img src="images/main/section3-05.jpg" alt="달러구트 꿈 백화점2">
+                                    </a></dd>
+                            </dl>
+                        </div><!-- best -->
+
+                        <div class="best">
+                            <dl>
+                                <dt>
+                                    <div class="book_img">
+                                        <img src="images/main/section3-06-1.jpg" alt="수상한 중고상점">
+                                    </div><!-- book_img" -->
+
+                                    <div class="book_txt">
+                                        <span class="number">6</span> <span class="b_name">수상한 중고상점</span><br>
+                                        <span class="change"><img src="images/main/up.png" alt="up"><span class="up">3</span></span> <span
+                                            class="name">미치오 슈스케</span>
+                                    </div><!-- book_txt -->
+                                </dt>
+
+                                <dd><a href="sub/all.html">
+                                        <div class="txt_1">'나미야 잡화점'에 견줄 감동 소설</div>
+                                        <div class="txt_2">"아픈 마음까지도 매입합니다."</div>
+                                        <img src="images/main/section3-06.jpg" alt=".수상한 중고상점">
+                                    </a></dd>
+                            </dl>
+                        </div><!-- best -->
+
+                    </div><!-- best_list2 -->
+
+                    <div class="swiper-slide best_list3">
+                        <div class="best">
+                            <dl>
+                                <dt>
+                                    <div class="book_img">
+                                        <img src="images/main/section3-07-1.jpg" alt="오늘 밤, 세게에서 이 사랑이 사라진대도">
+                                    </div><!-- book_img" -->
+
+                                    <div class="book_txt">
+                                        <span class="number">7</span> <span class="b_name">오늘 밤, 세게에서 이 사.
+                                            &middot;&middot;&middot; </span><br>
+                                        <span class="change"><img src="images/main/down.png" alt="down"><span class="down">3</span></span> <span
+                                            class="name">이지치조미사키</span>
+                                    </div><!-- book_txt -->
+                                </dt>
+
+                                <dd><a href="sub/all.html">
+                                        <div class="txt_1">세상에 하나뿐인 특별한 사랑 이야기</div>
+                                        <div class="txt_2">평범한 소녀와 평범한 소년의 특별한 사랑이야기</div>
+                                        <img src="images/main/section3-07.jpg" alt="오늘 밤, 세게에서 이 사랑이 사라진대도">
+                                    </a></dd>
+                            </dl>
+                        </div><!-- best -->
+
+                        <div class="best">
+                            <dl>
+                                <dt>
+                                    <div class="book_img">
+                                        <img src="images/main/section3-08-1.jpg" alt="외모 대여점">
+                                    </div><!-- book_img" -->
+
+                                    <div class="book_txt">
+                                        <span class="number">8</span> <span class="b_name">외모 대여점</span><br>
+                                        <span class="change"><img src="images/main/Line.png" alt="선"></span><span
+                                            class="name">이시카와 히로치카</span>
+                                    </div><!-- book_txt -->
+                                </dt>
+
+                                <dd><a href="sub/all.html">
+                                        <div class="txt_1">당신의 마음을 토닥여줄 단 한권의 힐링 소설</div>
+                                        <div class="txt_2">무엇이든 빌려드립니다.</div>
+                                        <img src="images/main/section3-08.jpg" alt="외모 대여점">
+                                    </a></dd>
+                            </dl>
+                        </div><!-- best -->
+
+                        <div class="best">
+                            <dl>
+                                <dt>
+                                    <div class="book_img">
+                                        <img src="images/main/section3-09-1.jpg" alt="불편한 편의점2">
+                                    </div><!-- book_img" -->
+
+                                    <div class="book_txt">
+                                        <span class="number">9</span> <span class="b_name">불편한 편의점2</span><br>
+                                        <span class="change"><img src="images/main/down.png" alt="선"><span class="down">2</span></span> <span
+                                            class="name">김호연</span>
+                                    </div><!-- book_txt -->
+                                </dt>
+
+                                <dd><a href="sub/all.html">
+                                        <div class="txt_1">여름 최고 기대작을 스토리드림에서</div>
+                                        <div class="txt_2">"불편한 편의점2"전자책 독점 공개</div>
+                                        <img src="images/main/section3-09.jpg" alt="불편한 편의점2">
+                                    </a></dd>
+                            </dl>
+                        </div><!-- best -->
+
+                    </div><!-- best_list3 -->
+
+                    <div class="swiper-slide best_list4">
+                        <div class="best">
+                            <dl>
+                                <dt>
+                                    <div class="book_img">
+                                        <img src="images/main/section3-10-1.jpg" alt="불편한 편의점">
+                                    </div><!-- book_img" -->
+
+                                    <div class="book_txt">
+                                        <span class="number">10</span> <span class="b_name">불편한 편의점</span><br>
+                                        <span class="change"><img src="images/main/Line.png" alt="업"><span class="up">2</span></span><span
+                                            class="name">김호연</span>
+                                    </div><!-- book_txt -->
+                                </dt>
+
+                                <dd><a href="sub/all.html">
+                                        <div class="txt_1">완독 확률 79%의 웃음과 감동</div>
+                                        <div class="txt_2">불편한데 자꾸 가고 싶은 편의점이 있다.</div>
+                                        <img src="images/main/section3-10.jpg" alt="불편한 편의점">
+                                    </a></dd>
+                            </dl>
+                        </div><!-- best -->
+
+                        <div class="best">
+                            <dl>
+                                <dt>
+                                    <div class="book_img">
+                                        <img src="images/main/section3-11-1.jpg" alt="책들의 부엌">
+                                    </div><!-- book_img" -->
+
+                                    <div class="book_txt">
+                                        <span class="number">11</span> <span class="b_name">책들의 부엌</span><br>
+                                        <span class="change"><img src="images/main/down.png" alt="down"><span class="down">2</span></span> <span
+                                            class="name">김지헤</span>
+                                    </div><!-- book_txt -->
+                                </dt>
+
+                                <dd><a href="sub/all.html">
+                                        <div class="txt_1">독자들이 뽑은 책 1위!</div>
+                                        <div class="txt_2">"달러구트"를 이을 또 하나의 대작</div>
+                                        <img src="images/main/section3-11.jpg" alt="책들의 부엌">
+                                    </a></dd>
+                            </dl>
+                        </div><!-- best -->
+
+                        <div class="best">
+                            <dl>
+                                <dt>
+                                    <div class="book_img">
+                                        <img src="images/main/section3-12-1.jpg" alt="어서오세요, 휴남동 서점">
+                                    </div><!-- book_img" -->
+
+                                    <div class="book_txt">
+                                        <span class="number">12</span> <span class="b_name">어서오세요, 휴남동 서점
+                                            &middot;&middot;&middot; </span><br>
+                                        <span class="change"><img src="images/main/Line.png" alt="up"><span class="up">1</span></span><span
+                                            class="name">황보름</span>
+                                    </div><!-- book_txt -->
+                                </dt>
+
+                                <dd><a href="sub/all.html">
+                                        <div class="txt_1">서점에서 펼쳐지는 감동 스토리</div>
+                                        <div class="txt_2">상처받은 사람들이 선택한 안식처</div>
+                                        <img src="images/main/section3-12.jpg" alt="어서오세요, 휴남동 서점">
+                                    </a></dd>
+                            </dl>
+                        </div><!-- best -->
+
+                    </div><!-- best_list4 -->
+
+                </div><!-- swiper-wapper -->
+            </div><!-- swiper -->
+        </div><!-- dream_best_all -->
+
+        </div><!-- inner -->
+    </section><!-- best -->
+
+    <section id="tag">
+        <div class="inner">
+
+            <h2>태그별 추천 판타지</h2>
+
+            <ul class="tag_name clearfix">
+                <li class="active">#동화같은</li>
+                <li>#장편</li>
+                <li>#단편</li>
+                <li>#마법같은</li>
+            </ul>
+
+            <div class="tag_all">
+
+                <div class="tag_wrap1">
+                <div class="swiper tag_list1">
+
+                    <ul class="swiper-wrapper">
+                        <li class="swiper-slide">
+                    
+                        <div class="tag_img">
+                            <div class="tag_img1"><a href="sub/all.html"><img src="images/main/section4-1_01.jpg"
+                                        alt="겨울왕국 또하나의 이야기"></a></div>
+
+                            <div class="tag_img2"><a href="sub/all.html">
+                                <p>
+                                    <span>"겨울왕국"의 핵심 사건이 바뀐다!</span><br>
+                                        기억이 지워진 안나와 엘사는 <br>
+                                        다시 만날 수 있을까?
+                                </p>
+                                <img src="images/main/section4-1_01.jpg"
+                                        alt="겨울왕국 또하나의 이야기"></a></div>
+                        </div><!-- tag_img -->
+                    
+                     </li>
+
+                     <li class="swiper-slide">
+
+                        <div class="tag_img">
+                            <div class="tag_img1"><a href="sub/all.html"><img src="images/main/section4-1_02.jpg"
+                                        alt="오즈의 헌옷수거함"></a></div>
+
+                            <div class="tag_img2"><a href="sub/all.html">
+                                <p>
+                                    <span>자음과 모음 청소년문학상 수상작!</span><br>
+                                    의류수거함에 버려진 일기장에서<br>
+                                    시작된 이야기
+                                </p>
+                                <img src="images/main/section4-1_02.jpg"
+                                        alt="오즈의 헌옷수거함"></a></div>
+                        </div><!-- tag_img -->
+                    
+                     </li>
+
+                     <li class="swiper-slide">
+
+                        <div class="tag_img">
+                            <div class="tag_img1"><a href="sub/all.html"><img src="images/main/section4-1_03.jpg"
+                                        alt="디즈니의 악당들"></a></div>
+
+                            <div class="tag_img2"><a href="sub/all.html">
+                                <p>
+                                <span>질투의 영왕에 대한 흥미로운 해석</span><br>
+                                    "거울아, 거울아, 이 세상에서 <br>
+                                    누가 제일 이쁘니?"
+                                </p>
+                                <img src="images/main/section4-1_03.jpg"
+                                        alt="디즈니의 악당들"></a></div>
+                        </div><!-- tag_img -->
+                    
+                     </li>
+
+                     <li class="swiper-slide">
+
+                        <div class="tag_img">
+                            <div class="tag_img1"><a href="sub/all.html"><img src="images/main/section4-1_04.jpg"
+                                        alt="아라의 소설"></a></div>
+
+                            <div class="tag_img2"><a href="sub/all.html">
+                                <p>
+                                <span>올해의 작가 정세량의 미니 픽션</span><br>
+                                    각자의 색으로 빛나는 우리의 이야기
+                                </p>
+                                <img src="images/main/section4-1_04.jpg"
+                                        alt="아라의 소설"></a></div>
+                        </div><!-- tag_img -->
+                    
+                     </li>
+
+                    </ul><!-- swiper-wrapper -->
+                    <span class="swiper-button-next arrow next"></span><!-- 방향버튼 -->
+                </div><!--swiper tag_list1-->
+                
+                </div>
+
+                
+                <div class="tag_wrap2">
+                <div class="swiper tag_list2">
+
+                    <ul class="swiper-wrapper">
+                        <li class="swiper-slide">
+
+                        <div class="tag_img">
+                            <div class="tag_img1"><a href="sub/all.html"><img src="images/main/section4-2_01.jpg"
+                                        alt="멀린 시리즈"></a></div>
+
+                            <div class="tag_img2"><a href="sub/all.html">
+                                <p>
+                                <span>"멀린" 시리즈</span><br>
+                                    중세유럽의 마법 판타지
+                                    
+                                </p>
+                                <img src="images/main/section4-2_01.jpg"
+                                        alt="멀린 시리즈"></a></div>
+                        </div><!-- tag_img -->
+                    
+                     </li>
+
+                     <li class="swiper-slide">
+
+                        <div class="tag_img">
+                            <div class="tag_img1"><a href="sub/all.html"><img src="images/main/section4-2_02.jpg"
+                                        alt="신더 시리즈"></a></div>
+
+                            <div class="tag_img2"><a href="sub/all.html"> 
+                                <p>
+                                <span>"신더" 시리즈</span><br>
+                                 가장 로맨틱하고 놀라운 판타지 로맨스
+                                </p>
+                            <img src="images/main/section4-2_02.jpg"
+                                        alt="신더 시리즈"></a> </div>
+                        </div><!-- tag_img -->
+                    
+                     </li>
+
+                     <li class="swiper-slide">
+            
+                        <div class="tag_img">
+                            <div class="tag_img1"><a href="sub/all.html"><img src="images/main/section4-2_03.jpg"
+                                        alt="테메레르시리즈"></a></div>
+
+                            <div class="tag_img2"><a href="sub/all.html">
+                                <p>
+                                <span>"테메레르" 시리즈</span><br>
+                                    '반지의 제왕'의 피터잭슨 감독이<br>
+                                     영화하기로한 작품
+                                </p>
+                                <img src="images/main/section4-2_03.jpg"
+                                        alt="테메레르시리즈"></a></div>
+                        </div><!-- tag_img -->
+                    
+                     </li>
+
+                     <li class="swiper-slide">
+
+                        <div class="tag_img">
+                            <div class="tag_img1"><a href="sub/all.html"><img src="images/main/section4-2_04.jpg"
+                                        alt="트리얀의 늑대 시리즈"></a></div>
+
+                            <div class="tag_img2"><a href="sub/all.html">
+                                <p>
+                                <span>"트리얀의 늑대" 시리즈</span><br>
+                                    빛나는 영웅 이카루스의 활약
+                                </p>
+                                <img src="images/main/section4-2_04.jpg"
+                                        alt="트리얀의 늑대 시리즈"></a></div>
+                        </div><!-- tag_img -->
+                    
+                     </li>
+
+                    </ul><!-- swiper-wrapper -->
+                    <span class="swiper-button-next arrow next"></span><!-- 방향버튼 -->
+                </div><!-- swiper tag_list2-->
+
+                </div>
+
+                <div class="tag_wrap3">
+                <div class="swiper tag_list3">
+
+                    <ul class="swiper-wrapper">
+                        <li class="swiper-slide">
+                
+                        <div class="tag_img">
+                            <div class="tag_img1"><a href="sub/all.html"><img src="images/main/section4-3_01.jpg"
+                                        alt="보테로 가족의 사랑약국"></a></div>
+
+                            <div class="tag_img2"><a href="sub/all.html">
+                                <p>
+                                <span>함부로 섭취하지 마세요</span><br>
+                                    "원치않는 사랑에 빠질 수 있으니"
+                                </p>
+                                <img src="images/main/section4-3_01.jpg"
+                                        alt="보테로 가족의 사랑약국"></a></div>
+                        </div><!-- tag_img -->
+                    
+                     </li>
+
+                     <li class="swiper-slide">
+                
+                        <div class="tag_img">
+                            <div class="tag_img1"><a href="sub/all.html"><img src="images/main/section4-3_02.jpg"
+                                        alt="외모 대여점"></a></div>
+
+                            <div class="tag_img2"><a href="sub/all.html">
+                                <p>
+                                <span>주간 베스트 도서</span><br>
+                                    무엇이든 빌려드립니다
+                                </p>
+                                <img src="images/main/section4-3_02.jpg"
+                                        alt="외모 대여점"></a></div>
+                        </div><!-- tag_img -->
+                    
+                     </li>
+
+                     <li class="swiper-slide">
+                      
+                        <div class="tag_img">
+                            <div class="tag_img1"><a href="sub/all.html"><img src="images/main/section4-3_03.jpg"
+                                        alt="달러구트의 꿈 백화점"></a></div>
+
+                            <div class="tag_img2"><a href="sub/all.html">
+                                <p>
+                                <span>독자들이 선택한 어른 동화</span><br>
+                                    잠든 당신의 또 다른 세계
+                                </p>
+                                <img src="images/main/section4-3_03.jpg"
+                                        alt="달러구트의 꿈 백화점"></a></div>
+                        </div><!-- tag_img -->
+                    
+                     </li>
+
+                     <li class="swiper-slide">
+                       
+                        <div class="tag_img">
+                            <div class="tag_img1 tag_s"><a href="sub/all.html"><img src="images/main/section4-3_04.jpg"
+                                        alt="한낮에 뜨는 달"></a></div>
+
+                            <div class="tag_img2"><a href="sub/all.html">
+                                <p>
+                                <span>결혼식날 남편을 사고로 읽은 유하.</span><br> 
+                                다른세계에서 남편을 만나게 되는데..
+                            </p>
+                            <img src="images/main/section4-3_04.jpg"
+                                        alt="한낮에 뜨는 달"></a></div>
+                        </div><!-- tag_img -->
+                    
+                     </li>
+
+                    </ul><!-- swiper-wrapper -->
+                    <span class="swiper-button-next arrow next"></span><!-- 방향버튼 -->
+                </div><!-- swiper tag_list3-->
+
+                </div>
+
+                <div class="tag_wrap4">
+                <div class="swiper tag_list4">
+
+                    <ul class="swiper-wrapper">
+                        <li class="swiper-slide">
+                      
+                        <div class="tag_img">
+                            <div class="tag_img1"><a href="sub/all.html"><img src="images/main/section4-4_01.jpg"
+                                        alt="마법의 고민 상담소"></a></div>
+
+                            <div class="tag_img2"><a href="sub/all.html">
+                                <p>
+                                <span>여기는 마법의 고민 상담소!</span><br>
+                                    당신의 고민을 들어드립니다.
+                                </p>
+                                <img src="images/main/section4-4_01.jpg"
+                                        alt="마법의 고민 상담소"></a></div>
+                        </div><!-- tag_img -->
+                    
+                     </li>
+
+                     <li class="swiper-slide">
+
+                        <div class="tag_img">
+                            <div class="tag_img1"><a href="sub/all.html"><img src="images/main/section4-4_02.jpg"
+                                        alt="시어니 트월과 마법"></a></div>
+
+                            <div class="tag_img2"><a href="sub/all.html">
+                                <p>
+                                <span>디즈니플러스 영화화 결정1</span><br>
+                                    "최고의 사랑은 마법이다!"
+                                </p>
+                                <img src="images/main/section4-4_02.jpg"
+                                        alt="시어니 트월과 마법"></a></div>
+                        </div><!-- tag_img -->
+                    
+                     </li>
+
+                     <li class="swiper-slide">
+
+                        <div class="tag_img">
+                            <div class="tag_img1"><a href="sub/all.html"><img src="images/main/section4-4_03.jpg"
+                                        alt="마법의 스톤 에뮬릿"></a></div>
+
+                            <div class="tag_img2"><a href="sub/all.html">
+                                <p>
+                                <span>스릴넘치는 판타지 모험!</span><br>
+                                    마법의 스톤, 에물릿
+                                </p>
+                                <img src="images/main/section4-4_03.jpg"
+                                        alt="마법의 스톤 에뮬릿"></a></div>
+                        </div><!-- tag_img -->
+                    
+                     </li>
+
+                     <li class="swiper-slide">
+
+                        <div class="tag_img">
+                            <div class="tag_img1"><a href="sub/all.html"><img src="images/main/section4-4_04.jpg"
+                                        alt="간니닌니 마법의 도서관: 빨간 머리 앤"></a></div>
+
+                            <div class="tag_img2"><a href="sub/all.html">
+                                <p>
+                                <span>키즈 크리에이터 간니닌니</span><br>
+                                    동화 나라로 모험을 떠나다!
+                                </p>
+                                <img src="images/main/section4-4_04.jpg"
+                                        alt="간니닌니 마법의 도서관: 빨간 머리 앤"></a></div>
+                        </div><!-- tag_img -->
+                    
+                     </li>
+
+                    </ul><!-- swiper-wrapper -->
+                    <span class="swiper-button-next arrow next"></span><!-- 방향버튼 -->
+                </div><!-- swiper tag_list4-->
+
+                </div>
+
+
+
+            </div><!-- tag_all-->
+
+        </div><!-- inner -->
+    </section><!-- tag -->
+
+    <section id="reader">
+        <div class="inner">
+            <h2>판타지와 함께한 작가</h2>
+
+            <div class="reader_all">
+            <div class="swiper reader_slide">
+
+            <ul class="swiper-wrapper">
+            <li class="swiper-slide reader_1">
+            <a href="sub/all.html"><img src="images/main/section5-1.jpg" alt="스테파니 메이어">
+            <div class="reader_txt">
+                <p>스테파니 메이어</p>
+                <span>트와일라잇 시리즈</span>
+            </div><!-- reader_txt -->
+        </a>
+        </li><!-- reader_1 -->
+
+        <li class="swiper-slide reader_2">
+            <a href="sub/all.html"><img src="images/main/section5-2.jpg" alt="J.R.R. 톨킨">
+            <div class="reader_txt">
+                <p>J.R.R. 톨킨</p>
+                <span>호빗, 반지의 원정대 시리즈</span>
+            </div><!-- reader_txt -->
+        </a>
+        </li><!-- reader_1 -->
+
+        <li class="swiper-slide reader_3">
+            <a href="sub/all.html"><img src="images/main/section5-3.jpg" alt="이영도">
+            <div class="reader_txt">
+                <p>이영도</p>
+                <span>드래곤라자 시리즈</span>
+            </div><!-- reader_txt -->
+        </a>
+        </li><!-- reader_1 -->
+
+        <li class="swiper-slide reader_4">
+            <a href="sub/all.html"><img src="images/main/section5-4.jpg" alt="전민희">
+            <div class="reader_txt">
+                <p>전민희</p>
+                <span>룬의 아이들 시리즈</span>
+            </div><!-- reader_txt -->
+        </a>
+        </li><!-- reader_1 -->
+        </ul>
+
+    </div><!-- reader_slide -->
+
+        </div><!-- inner -->
+    </section><!-- reader -->
+
+    <section id="new">
+        <div class="inner">
+            <h2>NEW! 판타지</h2>
+
+            <div class="new_all">
+            <div class="new1_txt">
+                <p>6개월</p>
+            </div><!-- new_6 -->
+
+            <div class="swiper new1_img1">
+                <ul class="swiper-wrapper">
+                    <li class="swiper-slide new_slide1">
+                        <a href="sub/all.html"><img src="images/main/section6-1_1.png"></a>
+                    </li><!-- swiper-slide new_slide -->
+
+                    <li class="swiper-slide new_slide2">
+                        <a href="sub/all.html"><img src="images/main/section6-1_2.png"></a>
+                    </li><!-- swiper-slide new_slide -->
+
+                    <li class="swiper-slide new_slide3">
+                        <a href="sub/all.html"><img src="images/main/section6-1_3.png"></a>
+                    </li><!-- swiper-slide new_slide -->
+
+                    <li class="swiper-slide new_slide4">
+                        <a href="sub/all.html"><img src="images/main/section6-1_4.png"></a>
+                    </li><!-- swiper-slide new_slide -->
+
+                    <li class="swiper-slide new_slide5">
+                        <a href="sub/all.html"><img src="images/main/section6-1_5.png"></a>
+                    </li><!-- swiper-slide new_slide -->
+
+                    <li class="swiper-slide new_slide6">
+                        <a href="sub/all.html"><img src="images/main/section6-1_6.png"></a>
+                    </li><!-- swiper-slide new_slide -->
+
+                    <li class="swiper-slide new_slide7">
+                        <a href="sub/all.html"><img src="images/main/section6-1_7.png"></a>
+                    </li><!-- swiper-slide new_slide -->
+
+                    <li class="swiper-slide new_slide8">
+                        <a href="sub/all.html"><img src="images/main/section6-1_8.png"></a>
+                    </li><!-- swiper-slide new_slide -->
+
+                    <li class="swiper-slide new_slide9">
+                        <a href="sub/all.html"><img src="images/main/section6-1_9.png"></a>
+                    </li><!-- swiper-slide new_slide -->
+
+                    <li class="swiper-slide new_slide10">
+                        <a href="sub/all.html"><img src="images/main/section6-1_10.png"></a>
+                    </li><!-- swiper-slide new_slide -->
+                </ul><!-- swiper-wrapper -->
+            </div><!-- swiper new1_img -->
+
+
+            <div class="new2_txt">
+                <p>12개월</p>
+            </div><!-- new_6 -->
+
+            <div class="swiper new1_img2">
+                <ul class="swiper-wrapper">
+                    <li class="swiper-slide new_slide1">
+                        <a href="sub/all.html"><img src="images/main/section6-2_1.png"></a>
+                    </li><!-- swiper-slide new_slide -->
+
+                    <li class="swiper-slide new_slide2">
+                        <a href="sub/all.html"><img src="images/main/section6-2_2.png"></a>
+                    </li><!-- swiper-slide new_slide -->
+
+                    <li class="swiper-slide new_slide3">
+                        <a href="sub/all.html"><img src="images/main/section6-2_3.png"></a>
+                    </li><!-- swiper-slide new_slide -->
+
+                    <li class="swiper-slide new_slide4">
+                        <a href="sub/all.html"><img src="images/main/section6-2_4.png"></a>
+                    </li><!-- swiper-slide new_slide -->
+
+                    <li class="swiper-slide new_slide5">
+                        <a href="sub/all.html"><img src="images/main/section6-2_5.png"></a>
+                    </li><!-- swiper-slide new_slide -->
+
+                    <li class="swiper-slide new_slide6">
+                        <a href="sub/all.html"><img src="images/main/section6-2_6.png"></a>
+                    </li><!-- swiper-slide new_slide -->
+
+                    <li class="swiper-slide new_slide7">
+                        <a href="sub/all.html"><img src="images/main/section6-2_7.png"></a>
+                    </li><!-- swiper-slide new_slide -->
+
+                    <li class="swiper-slide new_slide8">
+                        <a href="sub/all.html"><img src="images/main/section6-2_8.png"></a>
+                    </li><!-- swiper-slide new_slide -->
+
+                    <li class="swiper-slide new_slide9">
+                        <a href="sub/all.html"><img src="images/main/section6-2_9.png"></a>
+                    </li><!-- swiper-slide new_slide -->
+
+                    <li class="swiper-slide new_slide10">
+                        <a href="sub/all.html"><img src="images/main/section6-2_10.png"></a>
+                    </li><!-- swiper-slide new_slide -->
+                </ul><!-- swiper-wrapper -->
+            </div><!-- swiper new1_img -->
+            
+        </div><!-- new_all -->
+        </div><!-- inner -->
+    </section><!-- new -->
+
+    </main><!-- container -->
+
+    <footer id="footer">
+        <div class="inner">
+            <div class="footer_logo">
+                <a href="index.html"><img src="images/common/logo.png" alt="storydream 로고"></a>
                 </div><!-- footer_logo -->
 
-                <div class="footer_txt">
-                    <address><span>상호명</span> 주식회사 미스터콩<br>
-                        <span>주소</span> 경기도 남양주시 진건읍 진건우회로 19번길 11 미스터콩<br>
-                        <span>대표자</span> 권영석 <span>사업자등록번호</span> 120-87-97585 <span>고객센터</span> 031-575-1171
-                    </address>
+                <ul>
+                    <li>이용약관<i class="bi bi-chevron-right"></i></li>
+                    <li>개인정보처리방침<i class="bi bi-chevron-right"></i></li>
+                    <li>청소년정책보호<i class="bi bi-chevron-right"></i></li>
+                    <li>고객센터<i class="bi bi-chevron-right"></i></li>
+                    <li>환불신청<i class="bi bi-chevron-right"></i></li>
+                    <li>콘텐츠제휴문의<i class="bi bi-chevron-right"></i></li>
+                    <li>저작권/도서오류신고<i class="bi bi-chevron-right"></i></li>
+                    <li>뷰어다운로드<i class="bi bi-chevron-right"></i></li>
+                    <li>종료예상도서<i class="bi bi-chevron-right"></i></li>
+                </ul>
 
-                    <p class="copy">Copyright &copy; 2020 바라보다. All rights reserved.</p><!-- copy -->
-                </div><!-- footer_txt -->
+                <p class="copy">Copyright &copy; 2022 All Rights Reserved.</p>
+        </div><!-- inner -->
+    </footer>
 
-            </div><!-- inner -->
-        </footer>
-    </div>
-
+    </div><!-- wrap -->
 
 </body>
 
