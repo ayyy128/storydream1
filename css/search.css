@@ -90,6 +90,9 @@ body {  font-family: 'S-CoreDream', sans-serif; font-size: 1.6rem; line-height: 
     #container h2 { font-size: 1.8rem; }
 }
 
+@media (max-width:1000px) {
+    #container h2 { font-size: 1.5rem; }
+}
 
 /* search */
 #search .search_box { height: 60px; border-bottom: 1px solid #ddd; }
@@ -118,9 +121,14 @@ font-size: 1.4rem; line-height: 24px; border: 1px solid #CBC1B7; }
 
 @media (max-width:1000px) {
     #search_ex .ex_list li { padding:0 8px 13px 0 ; }
-
 #search_ex .ex_list li > a { padding: 6px 10px;
 font-size: 1.3rem; }
+}
+
+@media (max-width:700px) {
+    #search_ex .ex_list li { padding:0 8px 11px 0 ; }
+#search_ex .ex_list li > a { padding: 4px 8px;
+font-size: 1.2rem; }
 }
 
 
@@ -135,6 +143,18 @@ font-size: 1.3rem; }
 #dream_best .book_txt .number { font-size: 2.0rem; font-weight: 600; }
 #dream_best .book_txt .b_name { font-size: 1.5rem; }
 #dream_best .book_txt .name { font-size: 1.3rem; color: #666; position: absolute; left: 17px; top: 105%; }
+
+@media (max-width:1000px) {
+    #dream_best .book_txt .number { font-size: 1.8rem; }
+    #dream_best .book_txt .b_name { font-size: 1.3rem; }
+    #dream_best .book_txt .name { font-size: 1.1rem; }
+}
+
+@media (max-width:700px) {
+    #dream_best .book_txt .number { font-size: 1.5rem; }
+    #dream_best .book_txt .b_name { font-size: 1.2rem; }
+    #dream_best .book_txt .name { font-size: 1.0rem; }
+}
 
 /* category */
 #category { padding:30px 0 80px; }
@@ -152,7 +172,10 @@ font-size: 1.3rem; }
 }
 
 @media (max-width:700px) {
+    #category .category-list li { height: 100px; }
     #category .category_txt br { display: block; }
     #category .category_txt .more { display: inline-block; }
     #category .category_txt .more_none { display: none; }
+    #category .category_txt { font-size: 1.5rem; padding: 20px; }
+    #category .category_txt p { font-size: 1.2rem; margin-top: 12px; }
 }
